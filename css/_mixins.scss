@@ -1,0 +1,25 @@
+@mixin flex($direct: row, $gap: 0, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direct;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin primary-btn($color: white, $bg-color: #7C5CFC) {
+    display: block;
+    border-radius: 9999px;
+    color: $color;
+    background-color: $bg-color;
+    height: 2.25em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@mixin font($size: 1rem, $wt: 400, $color: black) {
+    font: {
+        size: $size;
+        weight: $wt;
+    }
+    color: $color;
+}
