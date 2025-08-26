@@ -142,26 +142,33 @@
             </div>
 
             <!--We'll style this when we introduce javascript-->
-            <button>With Spend.In</button>
-            <button>Without Spend.In</button>
-
-            <div id="with-spendin">
-                <h3 class="list-title">Track Business Expenses until its Milisecond</h3>
-                <ul class="spending-list">
-                    <li>Analyze your business cost easily with group transaction thorugh tagging feature.</li>
-                    <li>Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.</li>
-                    <li>Arrange your business expenses by date, name, etc., with just one click.</li>
-                </ul>
-                <img src="images/stats-good.svg" alt="" loading="lazy">
+            <div class="slider-container">
+                <button>With Spend.In</button>
+                <button>Without Spend.In</button>
             </div>
-            <div id="without-spendin">
-                <h3 class="list-title">Taking too long to tidy up administrative files makes it unproductive</h3>
-                <ul class="spending-list">
-                    <li>Complex recording process due to every administrative file in a different place.</li>
-                    <li>Need more effort to pay manually one by one invoice because there is no payment accommodation.</li>
-                    <li>Manual data arranging needs a long time because the different months/years are not in the same place.</li>
-                </ul>
-                <img src="images/stats-bad.svg" alt="" loading="lazy">
+
+            <!--Contains the two big lists. Try to change the class name later-->
+            <div class="list-flex">
+
+                <div id="with-spendin" class="spendin-list-container">
+                    <h3 class="list-title">Track Business Expenses until its Milisecond</h3>
+                    <ul class="spendin-list">
+                        <li>Analyze your business cost easily with group transaction thorugh tagging feature.</li>
+                        <li>Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.</li>
+                        <li>Arrange your business expenses by date, name, etc., with just one click.</li>
+                    </ul>
+                    <img src="images/stats-good.svg" alt="" loading="lazy">
+                </div>
+                <div id="without-spendin" class="spendin-list-container">
+                    <h3 class="list-title">Taking too long to tidy up administrative files makes it unproductive</h3>
+                    <ul class="spendin-list">
+                        <li>Complex recording process due to every administrative file in a different place.</li>
+                        <li>Need more effort to pay manually one by one invoice because there is no payment accommodation.</li>
+                        <li>Manual data arranging needs a long time because the different months/years are not in the same place.</li>
+                    </ul>
+                    <img src="images/stats-bad.svg" alt="" loading="lazy">
+                </div>
+                
             </div>
         </section>
 

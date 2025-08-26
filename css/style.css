@@ -133,17 +133,16 @@ p {
 }
 
 .primary-button {
-  display: block;
-  border-radius: 9999px;
-  color: white;
-  background-color: #7C5CFC;
-  height: 3em;
-  text-align: center;
   display: flex;
   flex-direction: row;
   gap: 0;
   justify-content: center;
   align-items: center;
+  border-radius: 9999px;
+  color: white;
+  background-color: #7C5CFC;
+  height: 3em;
+  text-align: center;
 }
 
 .hero-section {
@@ -260,6 +259,38 @@ p {
 
 #how-it-works .primary-button {
   margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.slider-container {
+  background-color: grey;
+  height: 3em;
+  margin-bottom: 2em;
+}
+
+.spendin-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.list-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  color: #0D121F;
+}
+
+.spendin-list li {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #0D121F;
   margin-bottom: 1em;
 }
 

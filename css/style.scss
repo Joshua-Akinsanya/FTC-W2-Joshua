@@ -30,7 +30,6 @@ p { @include index.text-style(0.875rem) }
 
 .primary-button {
     @include index.primary-btn();
-    @include index.flex();
 }
 
 // Logo + company name
@@ -125,6 +124,29 @@ p { @include index.text-style(0.875rem) }
     margin-top: 3em; // Must be greater than steps-container margin to
     margin-bottom: 1em;
 }
+
+
+// Increase productivity section
+
+.slider-container {
+    background-color: grey;
+    height: 3em;
+    margin-bottom: 2em;
+}
+
+.spendin-list-container {
+    @include index.flex(column, 1.5em);
+    width: 100%;
+}
+
+.list-title {
+    @include index.text-style($wt: 700, $color: index.$primary-color-dark);
+}
+.spendin-list li {
+    @include index.text-style(0.75rem, 500, index.$primary-color-dark);
+    margin-bottom: 1em;
+}
+
 
 // 'Testimonials' section
 

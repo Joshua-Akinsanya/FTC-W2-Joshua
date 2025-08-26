@@ -6,13 +6,13 @@
     align-items: $align;
 }
 
-@mixin button() {
+@mixin rounded() {
     border-radius: 9999px;
-    height: 2.5em;
+    height: 3em;
 }
 
 @mixin primary-btn($color: white, $bg-color: #7C5CFC) {
-    display: block;
+    @include flex();
     border-radius: 9999px;
     color: $color;
     background-color: $bg-color;
