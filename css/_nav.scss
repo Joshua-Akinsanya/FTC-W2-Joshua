@@ -26,3 +26,20 @@ nav {
         display: none;
     }
 }
+
+@media (min-width: 768px) {
+    nav {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        menu {
+            @include mix.flex($gap:1em);
+            a.nav-link {
+                @include mix.font(1.125rem, 500, white);
+            }
+        }
+    }
+}
