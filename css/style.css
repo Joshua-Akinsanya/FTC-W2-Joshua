@@ -75,6 +75,7 @@ img {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5;
+    text-align: left;
     color: #F3F5F7;
     height: 100%;
     display: flex;
@@ -87,6 +88,7 @@ img {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+    text-align: left;
     color: #C3D4E9;
   }
 }
@@ -103,6 +105,7 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5;
+  text-align: left;
   color: #F3F5F7;
   display: flex;
   flex-direction: row;
@@ -126,6 +129,7 @@ p {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
+  text-align: left;
 }
 
 .primary-button {
@@ -154,13 +158,6 @@ p {
 .hero-section .primary-button {
   margin: 24px 0;
 }
-.hero-section .link {
-  padding: 0.5em;
-  display: block;
-  width: auto;
-  margin: auto;
-  text-align: center;
-}
 .hero-section .dashboard-img {
   margin-top: 50px;
   width: 100%;
@@ -184,13 +181,14 @@ p {
 }
 
 .section-header {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 .section-title {
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: left;
   color: #7C5CFC;
 }
 
@@ -198,6 +196,7 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.5;
+  text-align: left;
   margin-bottom: 0.5em;
 }
 
@@ -237,16 +236,38 @@ p {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: left;
 }
 
-.link {
-  color: #596780;
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  margin-bottom: 2em;
+}
+
+.step-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #F3F5F7;
+  padding: 0 12vw;
+}
+
+#how-it-works .primary-button {
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 .testimonial .header {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: left;
   color: white;
   line-height: 1.5;
 }
@@ -264,6 +285,7 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.5;
+  text-align: left;
   color: #1A202C;
 }
 .footer.white-bg .brand svg g path {
@@ -273,6 +295,7 @@ p {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: left;
   color: #1A202C;
 }
 .footer.white-bg a.link {
@@ -282,12 +305,14 @@ p {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: left;
   color: #1A202C;
 }
 .footer.white-bg .copyright {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  text-align: left;
   color: #596780;
   line-height: 1.5;
 }
@@ -305,8 +330,8 @@ p {
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 1.5;
-    color: white;
     text-align: center;
+    color: white;
   }
   #hero-section p {
     font-size: 1.5rem;

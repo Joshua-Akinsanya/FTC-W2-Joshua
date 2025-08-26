@@ -26,12 +26,13 @@
     background-color: #1A202C;
 }
 
-@mixin text-style($size: 1rem, $wt: 400, $color: null,  $line-ht: 1.5) {
+@mixin text-style($size: 1rem, $wt: 400, $color: null, $align: left, $line-ht: 1.5) {
     font: {
         size: $size;
         weight: $wt;
     }
     line-height: 1.5;
+    text-align: $align;
     @if $color != null {
         color: $color;
     }

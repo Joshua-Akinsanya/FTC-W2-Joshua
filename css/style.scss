@@ -47,13 +47,6 @@ p { @include index.text-style(0.875rem) }
 
     .primary-button { margin: 24px 0; } // This margin is specific to the hero section
 
-    .link {
-        padding: 0.5em;
-        display: block;
-        width: auto;
-        margin: auto;
-        text-align: center;
-    }
     .dashboard-img {
         margin-top: 50px;
         width: 100%;
@@ -73,7 +66,7 @@ p { @include index.text-style(0.875rem) }
 
 // Contains 'section-title', 'section-headline' and 'section-subtext'
 .section-header {
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
 }
 .section-title {
     @include index.text-style(0.75rem, 600, index.$primary-color-mid);
@@ -117,11 +110,23 @@ p { @include index.text-style(0.875rem) }
 }
 .benefit-title { @include index.text-style($wt: 600) }
 
+// 'How it works' section
 
-// Link
-.link {
-    color: index.$grey-dark;
+.steps-container {
+    @include index.flex(column, 14px);
+    padding: 0 10%;
+    margin-bottom: 2em;
 }
+.step-text {
+    @include index.text-style(0.875rem, 500, index.$white357, center);
+    padding: 0 12vw;
+} 
+#how-it-works .primary-button {
+    margin-top: 3em; // Must be greater than steps-container margin to
+    margin-bottom: 1em;
+}
+
+// 'Testimonials' section
 
 .testimonial {
     .header {
@@ -168,8 +173,7 @@ p { @include index.text-style(0.875rem) }
     #hero-section {
         padding: 100px 120px;
         h1 {
-            @include index.text-style(4.5rem, 700, white);
-            text-align: center;
+            @include index.text-style(4.5rem, 700, white, center);
         }
         p {
             font-size: 1.5rem;
