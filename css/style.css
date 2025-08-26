@@ -23,7 +23,7 @@ img {
   max-width: 100%;
 }
 
-nav {
+.nav {
   display: flex;
   flex-direction: row;
   gap: 0;
@@ -33,38 +33,38 @@ nav {
   padding: 0 0 0 25px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1607843137);
 }
-nav #open-menu-button {
+.nav #open-menu-button {
   cursor: pointer;
   height: 100%;
   width: 5rem;
   padding: 0 1.25rem;
   transition: background-color 0.2s ease;
 }
-nav #open-menu-button svg {
+.nav #open-menu-button svg {
   width: 1.25rem;
   height: 1.25rem;
 }
-nav #open-menu-button:hover {
+.nav #open-menu-button:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
-nav menu {
+.nav menu {
   display: none;
 }
 
 @media (min-width: 768px) {
-  nav {
+  .nav {
     padding: 0 30px;
   }
 }
 @media (min-width: 1024px) {
-  nav menu {
+  .nav menu {
     display: flex;
     flex-direction: row;
     gap: 1em;
     justify-content: center;
     align-items: center;
   }
-  nav menu a.nav-link {
+  .nav menu a.nav-link {
     font-size: 1.125rem;
     font-weight: 500;
     color: white;
@@ -92,7 +92,7 @@ p {
   font-size: 0.875rem;
 }
 
-.logo-group {
+.brand {
   font-size: 1.125rem;
   font-weight: 400;
   color: white;
@@ -102,12 +102,42 @@ p {
   justify-content: center;
   align-items: center;
 }
-.logo-group .company-name {
+.brand .companyname {
   font-family: "Space Grotesk";
   font-size: 1em;
 }
-.logo-group .logo {
+.brand .logo {
   height: 1.1666666667em;
+}
+
+#hero-section {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+#hero-section h1 {
+  font-size: 2.25rem;
+  line-height: 1.5;
+  padding-bottom: 0.6em;
+}
+#hero-section p {
+  color: #90A3BF;
+  line-height: 1.5;
+}
+#hero-section a.primary-button {
+  margin: 24px 0;
+}
+#hero-section a.link {
+  padding: 0.5em;
+  display: block;
+  width: auto;
+  margin: auto;
+  text-align: center;
+}
+#hero-section .dashboard-img {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 section.appeal h1 {
@@ -169,38 +199,20 @@ a.primary-button {
   width: 100%;
 }
 
-.link {
-  color: #596780;
+a.secondary-button {
+  display: block;
+  border-radius: 9999px;
+  color: white;
+  background-color: #7C5CFC;
+  height: 2.25em;
+  text-align: center;
+  color: white;
+  background-color: #1A202C;
+  color: white;
 }
 
-#hero-section {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-#hero-section h1 {
-  font-size: 2.25rem;
-  line-height: 1.5;
-  padding-bottom: 0.6em;
-}
-#hero-section p {
-  color: #90A3BF;
-  line-height: 1.5;
-}
-#hero-section a.primary-button {
-  margin: 24px 0;
-}
-#hero-section a.link {
-  padding: 0.5em;
-  display: block;
-  width: auto;
-  margin: auto;
-  text-align: center;
-}
-#hero-section .dashboard-img {
-  margin-top: 50px;
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+.link {
+  color: #596780;
 }
 
 .testimonial .header {
@@ -219,12 +231,12 @@ a.primary-button {
   color: #C3D4E9;
 }
 
-footer.white-bg .logo-group {
+footer.white-bg .brand {
   font-size: 1.5rem;
   font-weight: 700;
   color: #1A202C;
 }
-footer.white-bg .logo-group svg g path {
+footer.white-bg .brand svg g path {
   fill: #7C5CFC;
 }
 footer.white-bg h3 {
@@ -250,5 +262,23 @@ footer.white-bg .copyright {
 @media (min-width: 768px) {
   .sm-screen-only {
     display: none;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-section {
+    padding: 100px 120px;
+  }
+  #hero-section h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+  }
+  #hero-section p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #hero-section a {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

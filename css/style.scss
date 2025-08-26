@@ -29,18 +29,52 @@ section {
 }
 
 p { font-size: 0.875rem }
+
+
 // Logo + company name
-.logo-group {
+
+.brand {
     @include index.font($size: 1.125rem, $color: white);
 
     //keep name , gap and logo size proportional
     @include index.flex($gap: calc(1em * 7 / 12));
-    .company-name {
+    .companyname {
         font-family: 'Space Grotesk';
         font-size: 1em;
     }
     .logo {
         height: calc(1em * 7 / 6);
+    }
+}
+
+#hero-section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    h1 {
+        font-size: 2.25rem;
+        line-height: 1.5;
+        padding-bottom: 0.6em;
+    }
+
+    p {
+        color: $secondary-color;
+        line-height: 1.5;
+    }
+
+    a.primary-button { margin: 24px 0; }
+
+    a.link {
+        padding: 0.5em;
+        display: block;
+        width: auto;
+        margin: auto;
+        text-align: center;
+    }
+    .dashboard-img {
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
     }
 }
 
@@ -77,41 +111,14 @@ a.primary-button {
     @include index.flex(); //Centralize text
     width: 100%;
 }
+a.secondary-button {
+    @include index.secondary-btn();
+    color: white;
+}
 
 // Link
 .link {
     color: $secondary-color-2;
-}
-
-#hero-section {
-    padding-top: 50px;
-    padding-bottom: 60px;
-    h1 {
-        font-size: 2.25rem;
-        line-height: 1.5;
-        padding-bottom: 0.6em;
-    }
-
-    p {
-        color: $secondary-color;
-        line-height: 1.5;
-    }
-
-    a.primary-button { margin: 24px 0; }
-
-    a.link {
-        padding: 0.5em;
-        display: block;
-        width: auto;
-        margin: auto;
-        text-align: center;
-    }
-    .dashboard-img {
-        margin-top: 50px;
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-    }
 }
 
 .testimonial {
@@ -129,7 +136,7 @@ a.primary-button {
 }
 
 footer.white-bg {
-    .logo-group {
+    .brand {
         @include index.font(1.5rem, 700, $text-color);
         svg g path {
             fill: $primary-color-2;
@@ -154,5 +161,18 @@ footer.white-bg {
 }
 
 @media (min-width: 1024px) {
-    
+    #hero-section {
+        padding: 100px 120px;
+        h1 {
+            @include index.font(4.5rem, 700, white);
+            text-align: center;
+        }
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        a {
+            font-size: 1rem;
+        }
+    }
 }
