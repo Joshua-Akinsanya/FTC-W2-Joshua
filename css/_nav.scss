@@ -8,7 +8,7 @@
     padding: 0 0 0 25px;
     border-bottom: solid 1px #FFFFFF29;
 
-    #open-menu-button {
+    .nav-menubtn {
         cursor: pointer;
         height: 100%;
         width: 5rem;
@@ -37,7 +37,7 @@
     .nav {
         menu {
             @include mix.flex($gap:1em);
-            a.nav-link {
+            navmenu-option {
                 @include mix.font(1.125rem, 500, white);
             }
         }

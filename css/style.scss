@@ -1,26 +1,15 @@
 @use "index";
 
-$primary-color-1: #0D121F;
-$primary-color-2: #7C5CFC;
-$secondary-color: #90A3BF;
-$secondary-color-2: #596780;
-$secondary-color-3: #C3D4E9;
-$header-color: #212121;
-$header-color-2: #040815;
-$border-color: #CEBEFE;
-$text-color: #1A202C;
-$white: #F3F5F7;
-
 :root {
     font-size: 16px;
 }
 
 body {
-    background-color: $primary-color-1;
+    background-color: index.$primary-color-dark;
     color: white;
 }
 
-section {
+.section {
     padding: 30px;
 }
 .benefit-icon {
@@ -47,23 +36,23 @@ p { font-size: 0.875rem }
     }
 }
 
-#hero-section {
+.hero-section {
     padding-top: 50px;
     padding-bottom: 60px;
-    h1 {
+    .section-heading {
         font-size: 2.25rem;
         line-height: 1.5;
         padding-bottom: 0.6em;
     }
 
-    p {
-        color: $secondary-color;
+    .section-intro {
+        color: index.$grey-mid;
         line-height: 1.5;
     }
 
-    a.primary-button { margin: 24px 0; }
+    .primary-button { margin: 24px 0; }
 
-    a.link {
+    .link {
         padding: 0.5em;
         display: block;
         width: auto;
@@ -78,29 +67,33 @@ p { font-size: 0.875rem }
     }
 }
 
+.section-title {
+    @include index.font(0.75rem, 600, index.$primary-color-mid);
+    color: index.$primary-color-mid;
+}
+
+.grey-text { color: index.$grey-dark }
+
 // sections with similar styles
 // assumes bg is dark
-section.appeal {
-    h1 {
-        color: $primary-color-2;
-        @include index.font(0.75rem, 600, $primary-color-2);
-    }
+
+.section.appeal {
     h2 { @include index.font(1.5rem, 700, white) }
     h3 { @include index.font(1.125rem, 600, white) }
-    p { color: $secondary-color }
+    p { color: index.$grey-mid }
     p.white-text { color: white }
 }
 
 // To be used with appeal class in HTML
 .white-bg {
     background-color: white;
-    color: $primary-color-1;
-    p { color: $secondary-color-2 }
+    color: index.$primary-color-dark;
+    p { color: index.$grey-dark }
 }
 .appeal.white-bg { 
-    h2 { color: $primary-color-1 }
-    p { color: $primary-color-1}
-    ul li { color: $primary-color-1 }
+    h2 { color: index.$primary-color-dark }
+    p { color: index.$primary-color-dark}
+    ul li { color: index.$primary-color-dark }
 }
 
 // To avoid including mixin each time
@@ -118,7 +111,7 @@ a.secondary-button {
 
 // Link
 .link {
-    color: $secondary-color-2;
+    color: index.$grey-dark;
 }
 
 .testimonial {
@@ -126,30 +119,30 @@ a.secondary-button {
         @include index.font($wt: 600, $color: white);
         line-height: 1.5;
     }
-    p { color: $white }
+    p { color: index.$white357 }
     .client-name {
         color: white; //Inherits white from the body already so could remove this
     }
     .client-role {
-        color: $secondary-color-3;
+        color: index.$grey-light;
     }
 }
 
-footer.white-bg {
+.footer.white-bg {
     .brand {
-        @include index.font(1.5rem, 700, $text-color);
+        @include index.font(1.5rem, 700, index.$black22);
         svg g path {
-            fill: $primary-color-2;
+            fill: index.$primary-color-mid;
         }
     }
 
-    h3 { @include index.font(1.25rem, 600, $text-color) }
+    h3 { @include index.font(1.25rem, 600, index.$black22) }
     a.link { line-height: 1.5 }
 
-    a.policy { @include index.font(1.125rem, 600, $text-color) }
+    a.policy { @include index.font(1.125rem, 600, index.$black22) }
 
     .copyright {
-        @include index.font($wt: 500, $color: $secondary-color-2);
+        @include index.font($wt: 500, $color: index.$grey-dark);
         line-height: 1.5;
     }
 }
