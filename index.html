@@ -43,7 +43,7 @@
             <path d="M1 1.91272H17M1 8.89526H17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
-        <menu id="nav-menu">
+        <menu id="nav-menu" class="nav-menu">
             <a href="" class="navmenu-option">Products</a>
             <a href="" class="navmenu-option">Benefits</a>
             <a href="" class="navmenu-option">How it Works</a>
@@ -66,34 +66,55 @@
         </section>
 
         <section id="benefits" class="section section-whitebg">
-            <h1 class="section-title">WHY USE SPEND.IN</h1>
-            <h2 class="section-headline">Easy, Simple, Affordable</h2>
-            <p class="section-subtext">Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.</p>
-
-            <img src="icons/auto-invoice.svg" alt="" class="benefit-icon" loading="lazy">
-            <h3 class="benefit-title">Automatic Invoice Payment</h3>
-            <p class="benefit-description">Automatic payments help you to arrange payments on a certain date without doing it manually again.</p>
+            <div class="section-header">
+                <h1 class="section-title">WHY USE SPEND.IN</h1>
+                <h2 class="section-headline">Easy, Simple, Affordable</h2>
+                <p class="section-subtext">Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.</p>
+            </div>
             
-            <img src="images/invoice-verified.png" alt="Invoice" loading="lazy">
-            <p class="benefit-description">No need to pay manually, we provide automatic invoice payment service! Set a payment schedule and you're done, it's that easy!</p>
+            <div class="benefit-grid">
+                <img src="icons/auto-invoice.svg" alt="" class="benefit-icon" loading="lazy">
+                <div class="benefit-column">
+                    <h3 class="benefit-title">Automatic Invoice Payment</h3>
+                    <p class="benefit-description">Automatic payments help you to arrange payments on a certain date without doing it manually again.</p>
+                </div>
+                <div class="hidden">
+                    <img src="images/invoice-verified.png" alt="Invoice" loading="lazy">
+                    <p class="benefit-description">No need to pay manually, we provide automatic invoice payment service! Set a payment schedule and you're done, it's that easy!</p>
+                </div>
+            </div>
 
-            <img src="icons/clr-pay-icon.svg" alt="" class="benefit-icon" loading="lazy">
-            <h3 class="benefit-title">Clear payment history</h3>
-            <p class="benefit-description">Clear payment history helps you to track your business expenses on specific dates.</p>
-            <img src="images/payhist-2x.png" alt="" loading="lazy">
-            <p class="benefit-description">Still writing manual expenses? Our platform breaks down every expense you log down to the millisecond!</p>
+            <div class="benefit-grid">
+                <img src="icons/clr-pay-icon.svg" alt="" class="benefit-icon" loading="lazy">
+                <div class="benefit-column">
+                    <h3 class="benefit-title">Clear payment history</h3>
+                    <p class="benefit-description">Clear payment history helps you to track your business expenses on specific dates.</p>
+                </div>
+                <div class="hidden">
+                    <img src="images/payhist-2x.png" alt="Payment history" class="hidden" loading="lazy">
+                    <p class="benefit-description" class="hidden">Still writing manual expenses? Our platform breaks down every expense you log down to the millisecond!</p>
+                </div>
+            </div>
             
-            <img src="icons/multi-card.svg" alt="" class="benefit-icon" loading="lazy">
-            <h3 class="benefit-title">Use of multi-card payments</h3>
-            <p class="benefit-description">Have more than one debit or credit card? Don't worry, we support payments using more than one card.</p>
-            <img src="images/credit-cards.svg" alt="" loading="lazy">
-            <p class="benefit-description">Have more than 1 bank account or credit/debit card? Our platform is already integrated with many banks around the world, for easier payments!</p>
+            <div class="benefit-grid">
+                <img src="icons/multi-card.svg" alt="" class="benefit-icon" loading="lazy">
+                <div class="benefit-column">
+                    <h3 class="benefit-title">Use of multi-card payments</h3>
+                    <p class="benefit-description">Have more than one debit or credit card? Don't worry, we support payments using more than one card.</p>
+                </div>
+                <div class="hidden">
+                    <img src="images/credit-cards.svg" alt="Credit cards" class="hidden" loading="lazy">
+                    <p class="benefit-description" class="hidden">Have more than 1 bank account or credit/debit card? Our platform is already integrated with many banks around the world, for easier payments!</p>
+                </div>
+            </div>
         </section>
 
         <section id="how-it-works" class="section">
-            <h1 class="section-title">HOW IT WORKS</h1>
-            <h2 class="section-headline">Few Easy Steps and Done</h2>
-            <p class="section-subtext">In just few easy step, you are all set to manage your business finances. Manage all expenses with Spend.In all in one place.</p>
+            <div class="section-header">
+                <h1 class="section-title">HOW IT WORKS</h1>
+                <h2 class="section-headline">Few Easy Steps and Done</h2>
+                <p class="section-subtext">In just few easy step, you are all set to manage your business finances. Manage all expenses with Spend.In all in one place.</p>
+            </div>
 
             <img src="images/steps.png" alt="" loading="lazy">
             <img src="images/step-1-regiser.png" alt="" loading="lazy">
@@ -110,8 +131,10 @@
         </section>
 
         <section id="increase-productivity" class="section section-whitebg">
-            <h1 class="section-title">INCREASE PRODUCTIVITY</h1>
-            <h2 class="section-headline">Reduce Time in Doing Manual Work Managing Expenses</h2>
+            <div class="section-header">
+                <h1 class="section-title">INCREASE PRODUCTIVITY</h1>
+                <h2 class="section-headline">Reduce Time in Doing Manual Work Managing Expenses</h2>
+            </div>
 
             <!--We'll style this when we introduce javascript-->
             <button>With Spend.In</button>
@@ -138,9 +161,11 @@
         </section>
 
         <section id="testimonials" class="section">
-            <h1 class="section-title">WHAT THEY SAY</h1>
-            <h2 class="section-headline">Our User Kind Words</h2>
-            <p class="section-subtext">Here are some testimonials from our user after using Spend.In to manage their business expenses.</p>
+            <div class="section-header">
+                <h1 class="section-title">WHAT THEY SAY</h1>
+                <h2 class="section-headline">Our User Kind Words</h2>
+                <p class="section-subtext">Here are some testimonials from our user after using Spend.In to manage their business expenses.</p>
+            </div>
 
             <div class="testimonial">
                 <h3 class="testimonial-title">It’s just incredible!</h3>

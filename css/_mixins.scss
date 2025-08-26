@@ -6,12 +6,17 @@
     align-items: $align;
 }
 
+@mixin button() {
+    border-radius: 9999px;
+    height: 2.5em;
+}
+
 @mixin primary-btn($color: white, $bg-color: #7C5CFC) {
     display: block;
     border-radius: 9999px;
     color: $color;
     background-color: $bg-color;
-    height: 2.25em;
+    height: 3em;
     text-align: center;
 }
 
@@ -21,10 +26,13 @@
     background-color: #1A202C;
 }
 
-@mixin font($size: 1rem, $wt: 400, $color: black) {
+@mixin text-style($size: 1rem, $wt: 400, $color: null,  $line-ht: 1.5) {
     font: {
         size: $size;
         weight: $wt;
     }
-    color: $color;
+    line-height: 1.5;
+    @if $color != null {
+        color: $color;
+    }
 }

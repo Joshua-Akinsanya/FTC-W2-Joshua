@@ -1,3 +1,7 @@
+:root {
+  font-size: 16px;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +15,6 @@ button {
 }
 
 a {
-  color: black;
   text-decoration: none;
 }
 
@@ -33,81 +36,110 @@ img {
   padding: 0 0 0 25px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1607843137);
 }
-.nav .nav-menubtn {
+
+.nav-menubtn {
   cursor: pointer;
   height: 100%;
   width: 5rem;
   padding: 0 1.25rem;
   transition: background-color 0.2s ease;
 }
-.nav .nav-menubtn svg {
+.nav-menubtn svg {
   width: 1.25rem;
   height: 1.25rem;
 }
-.nav .nav-menubtn:hover {
+.nav-menubtn:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
-.nav menu {
+
+.nav-menu {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav {
     padding: 0 30px;
   }
-}
-@media (min-width: 1024px) {
-  .nav menu {
+  .nav-menubtn {
+    display: none;
+  }
+  .nav-menu {
     display: flex;
     flex-direction: row;
     gap: 1em;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
-  .nav menu navmenu-option {
+  .navmenu-option {
     font-size: 1.125rem;
     font-weight: 500;
-    color: white;
+    line-height: 1.5;
+    color: #F3F5F7;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-ctalink {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #C3D4E9;
   }
 }
-:root {
-  font-size: 16px;
-}
-
 body {
   background-color: #0D121F;
-  color: white;
+  color: #F3F5F7;
 }
 
-.section {
-  padding: 30px;
-}
-
-.benefit-icon {
-  width: 32px;
-  height: 32px;
-}
-
-p {
-  font-size: 0.875rem;
+.hidden {
+  display: none;
 }
 
 .brand {
   font-size: 1.125rem;
   font-weight: 400;
-  color: white;
+  line-height: 1.5;
+  color: #F3F5F7;
   display: flex;
   flex-direction: row;
   gap: 0.5833333333em;
   justify-content: center;
   align-items: center;
 }
+.brand .logo {
+  height: 1.1666666667em;
+}
 .brand .companyname {
   font-family: "Space Grotesk";
   font-size: 1em;
 }
-.brand .logo {
-  height: 1.1666666667em;
+
+.section {
+  padding: 30px;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.primary-button {
+  display: block;
+  border-radius: 9999px;
+  color: white;
+  background-color: #7C5CFC;
+  height: 3em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-section {
@@ -118,10 +150,6 @@ p {
   font-size: 2.25rem;
   line-height: 1.5;
   padding-bottom: 0.6em;
-}
-.hero-section .section-intro {
-  color: #90A3BF;
-  line-height: 1.5;
 }
 .hero-section .primary-button {
   margin: 24px 0;
@@ -140,80 +168,75 @@ p {
   border-radius: 4px;
 }
 
-.section-title {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #7C5CFC;
-  color: #7C5CFC;
-}
-
-.grey-text {
-  color: #596780;
-}
-
-.section.appeal h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-}
-.section.appeal h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: white;
-}
-.section.appeal p {
+.section-subtext {
   color: #90A3BF;
 }
-.section.appeal p.white-text {
-  color: white;
-}
 
-.white-bg {
-  background-color: white;
-  color: #0D121F;
-}
-.white-bg p {
-  color: #596780;
-}
-
-.appeal.white-bg h2 {
-  color: #0D121F;
-}
-.appeal.white-bg p {
-  color: #0D121F;
-}
-.appeal.white-bg ul li {
-  color: #0D121F;
-}
-
-.primary-button {
-  display: block;
-  border-radius: 9999px;
-  color: white;
-  background-color: #7C5CFC;
-  height: 2.25em;
-  text-align: center;
-}
-
-a.primary-button {
+.section-link {
   display: flex;
   flex-direction: row;
   gap: 0;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  height: 3em;
+  color: #596780;
+  cursor: pointer;
 }
 
-a.secondary-button {
-  display: block;
-  border-radius: 9999px;
-  color: white;
-  background-color: #7C5CFC;
-  height: 2.25em;
-  text-align: center;
-  color: white;
-  background-color: #1A202C;
-  color: white;
+.section-header {
+  margin-bottom: 1.5em;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #7C5CFC;
+}
+
+.section-headline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+/*
+
+*********************************
+*               *               *
+*       1       *       2       *
+*               *               *
+*********************************
+*                               *
+*               3               *
+*                               *
+*********************************
+
+*/
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.benefit-grid .benefit-icon {
+  width: 32px;
+  height: 32px;
+}
+.benefit-grid .benefit-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: first baseline;
+  gap: 0.75em;
+}
+
+.benefit-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .link {
@@ -223,6 +246,7 @@ a.secondary-button {
 .testimonial .header {
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1.5;
   color: white;
   line-height: 1.5;
 }
@@ -239,6 +263,7 @@ a.secondary-button {
 .footer.white-bg .brand {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.5;
   color: #1A202C;
 }
 .footer.white-bg .brand svg g path {
@@ -247,6 +272,7 @@ a.secondary-button {
 .footer.white-bg h3 {
   font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.5;
   color: #1A202C;
 }
 .footer.white-bg a.link {
@@ -255,11 +281,13 @@ a.secondary-button {
 .footer.white-bg a.policy {
   font-size: 1.125rem;
   font-weight: 600;
+  line-height: 1.5;
   color: #1A202C;
 }
 .footer.white-bg .copyright {
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5;
   color: #596780;
   line-height: 1.5;
 }
@@ -276,6 +304,7 @@ a.secondary-button {
   #hero-section h1 {
     font-size: 4.5rem;
     font-weight: 700;
+    line-height: 1.5;
     color: white;
     text-align: center;
   }

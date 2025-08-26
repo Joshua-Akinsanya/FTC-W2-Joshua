@@ -1,56 +1,51 @@
 @use "index";
 
-:root {
-    font-size: 16px;
-}
-
 body {
     background-color: index.$primary-color-dark;
-    color: white;
+    color: index.$white357;
 }
+.hidden { display: none }
 
-.section {
-    padding: 30px;
-}
-.benefit-icon {
-    width: 32px;
-    height: 32px;
-}
-
-p { font-size: 0.875rem }
-
-
-// Logo + company name
+//Brand Component = Logo + Company Name
 
 .brand {
-    @include index.font($size: 1.125rem, $color: white);
+    @include index.text-style($size: 1.125rem, $color: index.$white357);
 
     //keep name , gap and logo size proportional
     @include index.flex($gap: calc(1em * 7 / 12));
+    .logo { height: calc(1em * 7 / 6) }
     .companyname {
         font-family: 'Space Grotesk';
         font-size: 1em;
     }
-    .logo {
-        height: calc(1em * 7 / 6);
-    }
 }
+
+// Base styles
+.section {
+    padding: 30px;
+}
+// Also applies 1.5 line height and 400 font-weight
+p { @include index.text-style(0.875rem) }
+
+
+.primary-button {
+    @include index.primary-btn();
+    @include index.flex();
+}
+
+// Logo + company name
 
 .hero-section {
     padding-top: 50px;
     padding-bottom: 60px;
+    
     .section-heading {
         font-size: 2.25rem;
         line-height: 1.5;
         padding-bottom: 0.6em;
     }
 
-    .section-intro {
-        color: index.$grey-mid;
-        line-height: 1.5;
-    }
-
-    .primary-button { margin: 24px 0; }
+    .primary-button { margin: 24px 0; } // This margin is specific to the hero section
 
     .link {
         padding: 0.5em;
@@ -67,47 +62,61 @@ p { font-size: 0.875rem }
     }
 }
 
+.section-subtext { color: index.$grey-mid }
+
+.section-link {
+    @include index.flex();
+    height: 3em;
+    color: index.$grey-dark;
+    cursor: pointer;
+}
+
+// Contains 'section-title', 'section-headline' and 'section-subtext'
+.section-header {
+    margin-bottom: 1.5em;
+}
 .section-title {
-    @include index.font(0.75rem, 600, index.$primary-color-mid);
-    color: index.$primary-color-mid;
+    @include index.text-style(0.75rem, 600, index.$primary-color-mid);
+}
+.section-headline {
+    @include index.text-style(1.5rem, 700);
+    margin-bottom: 0.5em;
 }
 
-.grey-text { color: index.$grey-dark }
+// Specific to 'Benefits' section
 
-// sections with similar styles
-// assumes bg is dark
+/*
 
-.section.appeal {
-    h2 { @include index.font(1.5rem, 700, white) }
-    h3 { @include index.font(1.125rem, 600, white) }
-    p { color: index.$grey-mid }
-    p.white-text { color: white }
-}
+*********************************
+*               *               *
+*       1       *       2       *
+*               *               *
+*********************************
+*                               *
+*               3               *
+*                               *
+*********************************
 
-// To be used with appeal class in HTML
-.white-bg {
-    background-color: white;
-    color: index.$primary-color-dark;
-    p { color: index.$grey-dark }
-}
-.appeal.white-bg { 
-    h2 { color: index.$primary-color-dark }
-    p { color: index.$primary-color-dark}
-    ul li { color: index.$primary-color-dark }
-}
+*/
 
-// To avoid including mixin each time
-.primary-button {
-    @include index.primary-btn();
+.benefit-grid {
+    $icon-length: 32px;
+    display: grid;
+    grid-template-columns: $icon-length 1fr;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    .benefit-icon {
+        width: $icon-length;
+        height: $icon-length;
+    }
+    .benefit-column {
+        @include index.flex(column, $align: first baseline);
+        gap: 0.75em;
+    }
 }
-a.primary-button {
-    @include index.flex(); //Centralize text
-    width: 100%;
-}
-a.secondary-button {
-    @include index.secondary-btn();
-    color: white;
-}
+.benefit-title { @include index.text-style($wt: 600) }
+
 
 // Link
 .link {
@@ -116,7 +125,7 @@ a.secondary-button {
 
 .testimonial {
     .header {
-        @include index.font($wt: 600, $color: white);
+        @include index.text-style($wt: 600, $color: white);
         line-height: 1.5;
     }
     p { color: index.$white357 }
@@ -130,22 +139,24 @@ a.secondary-button {
 
 .footer.white-bg {
     .brand {
-        @include index.font(1.5rem, 700, index.$black22);
+        @include index.text-style(1.5rem, 700, index.$black222);
         svg g path {
             fill: index.$primary-color-mid;
         }
     }
 
-    h3 { @include index.font(1.25rem, 600, index.$black22) }
+    h3 { @include index.text-style(1.25rem, 600, index.$black222) }
     a.link { line-height: 1.5 }
 
-    a.policy { @include index.font(1.125rem, 600, index.$black22) }
+    a.policy { @include index.text-style(1.125rem, 600, index.$black222) }
 
     .copyright {
-        @include index.font($wt: 500, $color: index.$grey-dark);
+        @include index.text-style($wt: 500, $color: index.$grey-dark);
         line-height: 1.5;
     }
 }
+
+// Media Queries
 
 @media (min-width: 768px) {
     .sm-screen-only {
@@ -157,7 +168,7 @@ a.secondary-button {
     #hero-section {
         padding: 100px 120px;
         h1 {
-            @include index.font(4.5rem, 700, white);
+            @include index.text-style(4.5rem, 700, white);
             text-align: center;
         }
         p {
