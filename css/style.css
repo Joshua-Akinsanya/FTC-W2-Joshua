@@ -10,7 +10,7 @@ button {
   border: none;
 }
 
-a, a:hover {
+a {
   color: black;
   text-decoration: none;
 }
@@ -74,7 +74,7 @@ p {
 }
 
 .logo-group {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   color: white;
   display: flex;
@@ -105,14 +105,49 @@ section.appeal h2 {
 section.appeal h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #040815;
+  color: white;
 }
 section.appeal p {
   color: #90A3BF;
 }
+section.appeal p.white-text {
+  color: white;
+}
 
-.appeal.white-bg {
+.white-bg {
   background-color: white;
+  color: #0D121F;
+}
+.white-bg p {
+  color: #596780;
+}
+
+.appeal.white-bg h2 {
+  color: #0D121F;
+}
+.appeal.white-bg p {
+  color: #0D121F;
+}
+.appeal.white-bg ul li {
+  color: #0D121F;
+}
+
+.primary-button {
+  display: block;
+  border-radius: 9999px;
+  color: white;
+  background-color: #7C5CFC;
+  height: 2.25em;
+  text-align: center;
+}
+
+a.primary-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 #hero-section h1 {
@@ -120,21 +155,6 @@ section.appeal p {
 }
 #hero-section p {
   color: #90A3BF;
-}
-#hero-section a.primary-button {
-  display: block;
-  border-radius: 9999px;
-  color: white;
-  background-color: #7C5CFC;
-  height: 2.25em;
-  text-align: center;
-  vertical-align: middle;
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 #hero-section .link {
   display: block;
@@ -146,4 +166,49 @@ section.appeal p {
   width: 100%;
   height: auto;
   border-radius: 4px;
+}
+
+.testimonial .header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.5;
+}
+.testimonial p {
+  color: #F3F5F7;
+}
+.testimonial .client-name {
+  color: white;
+}
+.testimonial .client-role {
+  color: #C3D4E9;
+}
+
+footer.white-bg .logo-group {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A202C;
+}
+footer.white-bg .logo-group svg g path {
+  fill: #7C5CFC;
+}
+footer.white-bg h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1A202C;
+}
+footer.white-bg a.link {
+  color: #596780;
+  line-height: 1.5;
+}
+footer.white-bg a.policy {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1A202C;
+}
+footer.white-bg .copyright {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #596780;
+  line-height: 1.5;
 }/*# sourceMappingURL=style.css.map */

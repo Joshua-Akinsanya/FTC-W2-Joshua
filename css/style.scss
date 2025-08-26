@@ -4,8 +4,12 @@ $primary-color-1: #0D121F;
 $primary-color-2: #7C5CFC;
 $secondary-color: #90A3BF;
 $secondary-color-2: #596780;
+$secondary-color-3: #C3D4E9;
 $header-color: #212121;
 $header-color-2: #040815;
+$border-color: #CEBEFE;
+$text-color: #1A202C;
+$white: #F3F5F7;
 
 :root {
     font-size: 16px;
@@ -27,7 +31,7 @@ section {
 p { font-size: 0.875rem }
 // Logo + company name
 .logo-group {
-    @include index.font($size: 18px, $color: white);
+    @include index.font($size: 1.125rem, $color: white);
 
     //keep name , gap and logo size proportional
     @include index.flex($gap: calc(1em * 7 / 12));
@@ -48,27 +52,37 @@ section.appeal {
         @include index.font(0.75rem, 600, $primary-color-2);
     }
     h2 { @include index.font(1.5rem, 700, white) }
-    h3 { @include index.font(1.125rem, 600, $header-color-2) }
+    h3 { @include index.font(1.125rem, 600, white) }
     p { color: $secondary-color }
+    p.white-text { color: white }
 }
+
 // To be used with appeal class in HTML
-.appeal.white-bg { 
+.white-bg {
     background-color: white;
-    
+    color: $primary-color-1;
+    p { color: $secondary-color-2 }
+}
+.appeal.white-bg { 
+    h2 { color: $primary-color-1 }
+    p { color: $primary-color-1}
+    ul li { color: $primary-color-1 }
+}
+
+// To avoid including mixin each time
+.primary-button {
+    @include index.primary-btn();
+}
+a.primary-button {
+    @include index.flex(); //Centralize text
+    width: 100%;
 }
 
 #hero-section {
-    h1 {
-        font-size: 2.25rem;
-    }
-    p {
-        color: $secondary-color;
-    }
-    a.primary-button {
-        @include index.primary-btn();
-        @include index.flex();
-        width: 100%;
-    }
+    h1 { font-size: 2.25rem }
+
+    p { color: $secondary-color }
+
     .link {
         display: block;
         width: 100%;
@@ -79,5 +93,41 @@ section.appeal {
         width: 100%;
         height: auto;
         border-radius: 4px;
+    }
+}
+
+.testimonial {
+    .header {
+        @include index.font($wt: 600, $color: white);
+        line-height: 1.5;
+    }
+    p { color: $white }
+    .client-name {
+        color: white; //Inherits white from the body already so could remove this
+    }
+    .client-role {
+        color: $secondary-color-3;
+    }
+}
+
+footer.white-bg {
+    .logo-group {
+        @include index.font(1.5rem, 700, $text-color);
+        svg g path {
+            fill: $primary-color-2;
+        }
+    }
+
+    h3 { @include index.font(1.25rem, 600, $text-color) }
+    a.link {
+        color: $secondary-color-2;
+        line-height: 1.5;
+    }
+
+    a.policy { @include index.font(1.125rem, 600, $text-color) }
+
+    .copyright {
+        @include index.font($wt: 500, $color: $secondary-color-2);
+        line-height: 1.5;
     }
 }
