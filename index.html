@@ -11,9 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     
+    <!--Plus Jakarta Sans Font-->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="favicon/favicon.png" type="image/png">
+
+    <!--Dashboard Image in hero section-->
+    <link rel="preload" as="image" href="images/dashboard-1x.png" imagesizes="100%">
+    <!--Consider preloading background ellipses-->
 </head>
 <body>
     <nav>
@@ -56,32 +61,31 @@
             <a class="primary-button" href="">Get a Free Demo</a>
             <a class="link" href="">See Pricing</a>
             
-            <img src="images/dashboard-1x.png" class="dashboard-img" alt="">
+            <img src="images/dashboard-1x.png" class="dashboard-img" loading="eager" fetchpriority="high">
         </section>
-        <!-- ENSURE TO IMPLEMENT LAZY LOADING-->
 
         <section id="benefits" class="appeal white-bg">
             <h1>WHY USE SPEND.IN</h1>
             <h2>Easy, Simple, Affordable</h2>
             <p>Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.</p>
 
-            <img src="icons/auto-invoice.svg" class="section-icon" alt="">
+            <img src="icons/auto-invoice.svg" class="section-icon" alt="" loading="lazy">
             <h3>Automatic Invoice Payment</h3>
             <p>Automatic payments help you to arrange payments on a certain date without doing it manually again.</p>
             
-            <img src="images/invoice-verified.png" alt="Invoice">
+            <img src="images/invoice-verified.png" alt="Invoice" loading="lazy">
             <p>No need to pay manually, we provide automatic invoice payment service! Set a payment schedule and you're done, it's that easy!</p>
 
-            <img src="icons/clr-pay-icon.svg" alt="">
+            <img src="icons/clr-pay-icon.svg" alt="" loading="lazy">
             <h3>Clear payment history</h3>
             <p>Clear payment history helps you to track your business expenses on specific dates.</p>
-            <img src="images/payhist-2x.png" alt="">
+            <img src="images/payhist-2x.png" alt="" loading="lazy">
             <p>Still writing manual expenses? Our platform breaks down every expense you log down to the millisecond!</p>
             
-            <img src="icons/multi-card.svg" alt="">
+            <img src="icons/multi-card.svg" alt="" loading="lazy">
             <h3>Use of multi-card payments</h3>
             <p>Have more than one debit or credit card? Don't worry, we support payments using more than one card.</p>
-            <img src="images/credit-cards.svg" alt="">
+            <img src="images/credit-cards.svg" alt="" loading="lazy">
             <p>Have more than 1 bank account or credit/debit card? Our platform is already integrated with many banks around the world, for easier payments!</p>
         </section>
 
@@ -90,14 +94,14 @@
             <h2>Few Easy Steps and Done</h2>
             <p>In just few easy step, you are all set to manage your business finances. Manage all expenses with Spend.In all in one place.</p>
 
-            <img src="images/steps.png" alt="">
-            <img src="images/step-1-regiser.png" alt="">
+            <img src="images/steps.png" alt="" loading="lazy">
+            <img src="images/step-1-regiser.png" alt="" loading="lazy">
             <p class="white-text">Register your Spend.In account.</p>
 
-            <img src="images/step-2-expenses.png" alt="">
+            <img src="images/step-2-expenses.png" alt="" loading="lazy">
             <p class="white-text">Fill in the list of your business expenses.</p>
 
-            <img src="images/step-3-done.png" alt="">
+            <img src="images/step-3-done.png" alt="" loading="lazy">
             <p class="white-text">Done, let’s continue the work.</p>
 
             <a href="">Get a Free Demo</a>
@@ -118,7 +122,7 @@
                     <li>Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.</li>
                     <li>Arrange your business expenses by date, name, etc., with just one click.</li>
                 </ul>
-                <img src="images/stats-good.svg" alt="">
+                <img src="images/stats-good.svg" alt="" loading="lazy">
             </div>
             <div id="without">
                 <h3>Taking too long to tidy up administrative files makes it unproductive</h3>
@@ -127,7 +131,7 @@
                     <li>Need more effort to pay manually one by one invoice because there is no payment accommodation.</li>
                     <li>Manual data arranging needs a long time because the different months/years are not in the same place.</li>
                 </ul>
-                <img src="images/stats-bad.svg" alt="">
+                <img src="images/stats-bad.svg" alt="" loading="lazy">
             </div>
         </section>
 
@@ -139,7 +143,7 @@
             <div class="testimonial">
                 <h3 class="header">It’s just incredible!</h3>
                 <p>It’s just 1 month since I’m using Spend.In to manage my business expenses, but the result is very satisfying! My business finance now more neat than before, thanks to Spend.In!</p>
-                <img src="images/user-one-2x.png" alt="" class="client-pic">
+                <img src="images/user-one-2x.png" alt="" class="client-pic" loading="lazy">
                 <h4 class="client-name">Jimmy Bartney</h4>
                 <p class="client-role">Product Manager at Picko Lab</p>
             </div>
@@ -147,7 +151,7 @@
             <div class="testimonial">
                 <h3 class="header">Satisfied User Here!</h3>
                 <p>Never thought that with Spend.In managing my business expenses is so easy! Been using this platform for 3 months and still counting!</p>
-                <img src="images/user-two-2x.png" alt="" class="client-pic">
+                <img src="images/user-two-2x.png" alt="" class="client-pic" loading="lazy">
                 <h4 class="client-name">Natasha Romanoff</h4>
                 <p class="client-role">Black Widow</p>
             </div>
@@ -155,7 +159,7 @@
             <div class="testimonial">
                 <h3 class="header">No doubt, Spend.In is the best!</h3>
                 <p>“The best”! That’s what I want to say to this platform, didn’t know that there’s a platform to help you manage your business expenses like this! Very recommended to you who have a big business!</p>
-                <img src="images/user-three-2x.png" alt="" class="client-pic">
+                <img src="images/user-three-2x.png" alt="" class="client-pic" loading="lazy">
                 <h4 class="client-name">Moritika Kazuki</h4>
                 <p class="client-role">Finance Manager at Mangan</p>
             </div>
@@ -169,13 +173,13 @@
                 <p>Monthly</p>
                 <input type="checkbox" name="" id="">
                 <p>Yearly</p>
-                <span>Save 65%</span><img src="" alt="">
-                <img src="icons/arrow-scribbly.svg" alt="">
+                <span>Save 65%</span>
+                <img src="icons/arrow-scribbly.svg" alt="" loading="lazy">
             </div>
 
             <div>
                 <div class="price-card">
-                    <img src="icons/free-tier.svg" alt="">
+                    <img src="icons/free-tier.svg" alt="" loading="lazy">
                     <h2>Free</h2>
                     <p>Perfect plan to get started</p>
                     <p>$0 /month</p>
@@ -200,8 +204,8 @@
             <h2>Start Track Your Business Expenses Today</h2>
             <p>Are you ready to make your business more organized? Download Spend.In now!</p>
             <a href="" class="primary-button">Get a Free Demo</a>
-            <img src="images/spending-stats.svg" alt="">
-            <img src="images/spend-category.svg" alt="">
+            <img src="images/spending-stats.svg" alt="" loading="lazy">
+            <img src="images/spend-category.svg" alt="" loading="lazy">
         </section>
     </main>
 
