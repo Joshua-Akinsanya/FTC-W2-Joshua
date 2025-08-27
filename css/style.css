@@ -327,21 +327,33 @@ p {
   background-color: #1A202C;
   padding: 25px;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
-.testimonial .header {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: left;
-  color: white;
+.testimonial .testimonial-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: first baseline;
 }
-.testimonial p {
+.testimonial .client-info {
+  margin-top: 1.5rem;
+  border-top: solid 1px #90A3BF;
+  padding-top: 1.5rem;
+  display: inline-grid;
+  grid-template-columns: 58px 1fr;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.testimonial .client-info .client-pic {
+  aspect-ratio: 1/1;
+  height: 58px;
+  grid-row: 1/span 2;
+}
+.testimonial .client-info .client-name {
   color: #F3F5F7;
 }
-.testimonial .client-name {
-  color: white;
-}
-.testimonial .client-role {
+.testimonial .client-info .client-role {
   color: #C3D4E9;
 }
 

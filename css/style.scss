@@ -177,15 +177,31 @@ p { @include index.text-style(0.875rem) }
     background-color: index.$black222;
     padding: 25px;
     border-radius: 10px;
-    .header {
-        @include index.text-style($wt: 600, $color: white);
+    margin-bottom: 30px;
+    
+    .testimonial-text {
+        @include index.flex(column, 20px, $align: first baseline);
     }
-    p { color: index.$white357 }
-    .client-name {
-        color: white; //Inherits white from the body already so could remove this
-    }
-    .client-role {
-        color: index.$grey-light;
+    .client-info {
+        $pic-size: 58px;
+        margin-top: 1.5rem;
+        border-top: solid 1px index.$grey-mid;
+        padding-top: 1.5rem;
+        display: inline-grid;
+        grid-template-columns:  $pic-size 1fr;
+        column-gap: 1rem;
+
+        .client-pic {
+            aspect-ratio: 1 / 1;
+            height: $pic-size;
+            grid-row: 1 / span 2;
+        }
+        .client-name {
+            color: index.$white357; //Inherits white from the body already so could remove this
+        }
+        .client-role {
+            color: index.$grey-light;
+        }
     }
 }
 
