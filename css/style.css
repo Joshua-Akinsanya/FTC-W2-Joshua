@@ -284,7 +284,7 @@ p {
   flex-direction: column;
   gap: 1.5em;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
   width: 100%;
 }
 
@@ -303,15 +303,37 @@ p {
   text-align: left;
   color: #0D121F;
   margin-bottom: 1em;
+  padding-left: 30px;
 }
 
+.goodlist li {
+  background-image: url("../icons/tick-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+.badlist li {
+  background-image: url("../icons/cross-circle-red.svg");
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+}
+
+.stats {
+  align-self: center;
+  border-radius: 8px;
+}
+
+.testimonial {
+  background-color: #1A202C;
+  padding: 25px;
+  border-radius: 10px;
+}
 .testimonial .header {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
   text-align: left;
   color: white;
-  line-height: 1.5;
 }
 .testimonial p {
   color: #F3F5F7;

@@ -136,6 +136,7 @@ p { @include index.text-style(0.875rem) }
 
 // Increase productivity section
 
+// To be continued
 .slider-container {
     background-color: grey;
     height: 3em;
@@ -143,7 +144,7 @@ p { @include index.text-style(0.875rem) }
 }
 
 .spendin-list-container {
-    @include index.flex(column, 1.5em);
+    @include index.flex(column, 1.5em, $align: first baseline);
     width: 100%;
 }
 
@@ -153,15 +154,31 @@ p { @include index.text-style(0.875rem) }
 .spendin-list li {
     @include index.text-style(0.75rem, 500, index.$primary-color-dark);
     margin-bottom: 1em;
+    padding-left: 30px;
 }
-
+.goodlist li { //Green circles with tick
+    background-image: url('../icons/tick-circle.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+.badlist li {
+    background-image: url('../icons/cross-circle-red.svg');
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+}
+.stats {
+    align-self: center;
+    border-radius: 8px;
+}
 
 // 'Testimonials' section
 
 .testimonial {
+    background-color: index.$black222;
+    padding: 25px;
+    border-radius: 10px;
     .header {
         @include index.text-style($wt: 600, $color: white);
-        line-height: 1.5;
     }
     p { color: index.$white357 }
     .client-name {
