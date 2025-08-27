@@ -1,3 +1,5 @@
+@use "variables" as var;
+
 @mixin flex($direct: row, $gap: 0, $justify: center, $align: center) {
     display: flex;
     flex-direction: $direct;
@@ -11,7 +13,7 @@
     height: 3em;
 }
 
-@mixin primary-btn($color: white, $bg-color: #7C5CFC) {
+@mixin primary-btn($color: var.$white, $bg-color: var.$primary-color-mid) {
     @include flex();
     border-radius: 9999px;
     color: $color;
@@ -36,4 +38,9 @@
     @if $color != null {
         color: $color;
     }
+}
+
+@mixin white-bg() {
+    background-color: var.$white;
+    color: var.$primary-color-dark;
 }

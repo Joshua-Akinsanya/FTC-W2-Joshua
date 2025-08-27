@@ -139,7 +139,7 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 9999px;
-  color: white;
+  color: #F5F5F5;
   background-color: #7C5CFC;
   height: 3em;
   text-align: center;
@@ -197,6 +197,17 @@ p {
   line-height: 1.5;
   text-align: left;
   margin-bottom: 0.5em;
+}
+
+.section-whitebg {
+  background-color: #F5F5F5;
+  color: #0D121F;
+}
+.section-whitebg .section-headline {
+  color: #0D121F;
+}
+.section-whitebg p {
+  color: #596780;
 }
 
 /*
@@ -312,34 +323,38 @@ p {
   color: #C3D4E9;
 }
 
-.footer.white-bg .brand {
+.footer {
+  background-color: #F5F5F5;
+  color: #0D121F;
+}
+.footer .brand {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: left;
   color: #1A202C;
 }
-.footer.white-bg .brand svg g path {
+.footer .brand svg g path {
   fill: #7C5CFC;
 }
-.footer.white-bg h3 {
+.footer h3 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
   text-align: left;
   color: #1A202C;
 }
-.footer.white-bg a.link {
+.footer a.link {
   line-height: 1.5;
 }
-.footer.white-bg a.policy {
+.footer a.policy {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
   text-align: left;
   color: #1A202C;
 }
-.footer.white-bg .copyright {
+.footer .copyright {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;

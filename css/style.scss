@@ -32,8 +32,6 @@ p { @include index.text-style(0.875rem) }
     @include index.primary-btn();
 }
 
-// Logo + company name
-
 .hero-section {
     padding-top: 50px;
     padding-bottom: 60px;
@@ -73,6 +71,16 @@ p { @include index.text-style(0.875rem) }
 .section-headline {
     @include index.text-style(1.5rem, 700);
     margin-bottom: 0.5em;
+}
+
+// White Background
+
+.section-whitebg {
+    @include index.white-bg();
+    .section-headline {
+        color: index.$primary-color-dark;
+    }
+    p { color: index.$grey-dark }
 }
 
 // Specific to 'Benefits' section
@@ -164,7 +172,8 @@ p { @include index.text-style(0.875rem) }
     }
 }
 
-.footer.white-bg {
+.footer {
+    @include index.white-bg();
     .brand {
         @include index.text-style(1.5rem, 700, index.$black222);
         svg g path {
