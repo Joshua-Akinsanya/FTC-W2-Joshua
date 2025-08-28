@@ -38,8 +38,8 @@ a { @include text-style($color: $grey-light) }
     p { color: $grey-dark }
 }
 
-@media (min-width: 768px) {
-    .sm-screen-only {
+.sm-screen-only {
+    @include respond(tablet) {
         display: none;
     }
 }

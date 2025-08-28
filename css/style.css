@@ -90,6 +90,7 @@ a {
     display: none;
   }
 }
+
 :root {
   font-size: 16px;
 }
@@ -414,26 +415,60 @@ p {
   height: auto;
   border-radius: 4px;
 }
-
-@media (min-width: 1024px) {
-  #hero-section {
+@media (min-width: 992px) {
+  .hero-section {
     padding: 100px 120px;
   }
-  #hero-section h1 {
+  .hero-section .section-heading {
+    margin: auto;
+    width: 750px;
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
     color: white;
   }
-  #hero-section p {
+  .hero-section .section-subtext {
     font-size: 1.5rem;
     text-align: center;
   }
-  #hero-section a {
+  .hero-section .hero-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-section .primary-button, .hero-section .section-link {
     font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+  }
+  .hero-section .section-link {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    color: #F5F5F5;
+    background-color: #1A202C;
+    padding: 1em;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .hero-section .section-link:hover {
+    background-color: rgb(54.4142857143, 66.9714285714, 92.0857142857);
+  }
+  .hero-section .dashboard-img {
+    border-radius: 12px;
   }
 }
+
 /*
 
 *********************************

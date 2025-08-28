@@ -1,4 +1,5 @@
 @use "../abstracts/index" as *;
+@use "sass:color";
 
 .hero-section {
     padding-top: 50px;
@@ -11,27 +12,40 @@
     }
 
     .primary-button { margin: 24px 0; } // This margin is specific to the hero section
-
+    
     .dashboard-img {
         margin-top: 50px;
         width: 100%;
         height: auto;
         border-radius: 4px;
     }
-}
 
-@media (min-width: 1024px) {
-    #hero-section {
+    @include respond(desktop) {
         padding: 100px 120px;
-        h1 {
+        .section-heading {
+            margin: auto;
+            width: 750px;
             @include text-style(4.5rem, 700, white, center);
         }
-        p {
+        .section-subtext {
             font-size: 1.5rem;
             text-align: center;
         }
-        a {
-            font-size: 1rem;
+        .hero-cta {
+            @include flex(row, 1.5rem)
         }
+        .primary-button, .section-link {
+            font-size: 1rem;
+            @include flex();
+            height: 3em;
+        }
+        .section-link {
+            @include primary-btn($bg-color: $black222);
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: color.adjust($color: $black222, $lightness: 15%);
+            }
+        }
+        .dashboard-img { border-radius: 12px}
     }
 }
