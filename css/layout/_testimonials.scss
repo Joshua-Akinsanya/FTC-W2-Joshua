@@ -44,12 +44,6 @@
         gap: 2rem;
 
         .section-header { grid-column: 1 / span 3 }
-        
-        .section-title, .section-headline, .section-subtext {
-            text-align: center;
-        }
-        .section-title, .section-subtext { font-size: 1.25rem }
-        .section-headline { font-size: 2.5rem }
 
         .testimonial { @include flex(column) }
         

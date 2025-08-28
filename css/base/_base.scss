@@ -38,6 +38,16 @@ a { @include text-style($color: $grey-light) }
     p { color: $grey-dark }
 }
 
+.section {
+    @include respond(desktop) {
+        .section-title, .section-headline, .section-subtext {
+            text-align: center;
+        }
+        .section-title, .section-subtext { font-size: 1.25rem }
+        .section-headline { font-size: 2.5rem }
+    }
+}
+
 .sm-screen-only {
     @include respond(tablet) {
         display: none;
