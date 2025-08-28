@@ -10,7 +10,7 @@
 
 @mixin rounded() {
     border-radius: 9999px;
-    height: 3em;
+    padding: 1em;
 }
 
 @mixin primary-btn($color: var.$white, $bg-color: var.$primary-color-mid) {
@@ -43,4 +43,12 @@
 @mixin white-bg() {
     background-color: var.$white;
     color: var.$primary-color-dark;
+}
+
+@mixin custom-li($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    background-size: 1rem;
+    padding-left: 30px;
 }

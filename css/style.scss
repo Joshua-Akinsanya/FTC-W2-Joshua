@@ -2,7 +2,7 @@
 
 body {
     background-color: index.$primary-color-dark;
-    color: index.$white357;
+    color: index.$white;
 }
 .hidden { display: none }
 
@@ -153,19 +153,21 @@ p { @include index.text-style(0.875rem) }
 }
 .spendin-list li {
     @include index.text-style(0.75rem, 500, index.$primary-color-dark);
-    margin-bottom: 1em;
-    padding-left: 30px;
 }
-.goodlist li { //Green circles with tick
-    background-image: url('../icons/tick-circle.svg');
-    background-repeat: no-repeat;
-    background-size: 1rem;
+.greentick-li { //Green circles with tick
+    @include index.custom-li('../icons/tick-circle.svg');
 }
-.badlist li {
-    background-image: url('../icons/cross-circle-red.svg');
-    background-repeat: no-repeat;
-    background-size: 1.2rem;
+.redcross-li {
+    @include index.custom-li('../icons/cross-circle-red.svg');
 }
+.graycross-li {
+    @include index.custom-li('../icons/cross-circle-grey.svg');
+}
+
+.list li {
+    padding-bottom: 1.25em;
+}
+
 .stats {
     align-self: center;
     border-radius: 8px;
@@ -184,10 +186,12 @@ p { @include index.text-style(0.875rem) }
     }
     .client-info {
         $pic-size: 58px;
+
         margin-top: 1.5rem;
         border-top: solid 1px index.$grey-mid;
         padding-top: 1.5rem;
         display: inline-grid;
+        width: 100%;
         grid-template-columns:  $pic-size 1fr;
         column-gap: 1rem;
 
@@ -203,6 +207,28 @@ p { @include index.text-style(0.875rem) }
             color: index.$grey-light;
         }
     }
+}
+
+#pricing {
+    .pricing-heading {
+        @include index.text-style(1.5rem, 700, index.$primary-color-dark, center);
+    }
+}
+
+.promo-container {
+    .promo-option {
+        display: inline-block;
+        @include index.text-style(1.25rem, 600, index.$black0c)
+    }
+    .promo-text {
+        display: inline-block;
+        @include index.rounded();
+        background-color: index.$primary-color-vlight;
+    }
+}
+
+#call-to-action .primary-button {
+    margin: 25px 0;
 }
 
 .footer {

@@ -92,9 +92,42 @@ img {
     color: #C3D4E9;
   }
 }
+.userplan-card {
+  background-color: #EDEDED;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 30px;
+}
+.userplan-card .plan-logotitle-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.userplan-card .plan-title, .userplan-card .plan-icon {
+  display: inline-block;
+}
+
+.price {
+  margin: 25px 0;
+}
+
+.price-bold {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  color: #0D121F;
+}
+
+.features-list {
+  margin: 25px 0;
+}
+
 body {
   background-color: #0D121F;
-  color: #F3F5F7;
+  color: #F5F5F5;
 }
 
 .hidden {
@@ -302,20 +335,34 @@ p {
   line-height: 1.5;
   text-align: left;
   color: #0D121F;
-  margin-bottom: 1em;
+}
+
+.greentick-li {
+  background-image: url("../icons/tick-circle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  background-size: 1rem;
   padding-left: 30px;
 }
 
-.goodlist li {
-  background-image: url("../icons/tick-circle.svg");
-  background-repeat: no-repeat;
-  background-size: 1rem;
-}
-
-.badlist li {
+.redcross-li {
   background-image: url("../icons/cross-circle-red.svg");
   background-repeat: no-repeat;
-  background-size: 1.2rem;
+  background-position: 0 5px;
+  background-size: 1rem;
+  padding-left: 30px;
+}
+
+.graycross-li {
+  background-image: url("../icons/cross-circle-grey.svg");
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  background-size: 1rem;
+  padding-left: 30px;
+}
+
+.list li {
+  padding-bottom: 1.25em;
 }
 
 .stats {
@@ -341,6 +388,7 @@ p {
   border-top: solid 1px #90A3BF;
   padding-top: 1.5rem;
   display: inline-grid;
+  width: 100%;
   grid-template-columns: 58px 1fr;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
@@ -355,6 +403,33 @@ p {
 }
 .testimonial .client-info .client-role {
   color: #C3D4E9;
+}
+
+#pricing .pricing-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  color: #0D121F;
+}
+
+.promo-container .promo-option {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  color: #0C0C0C;
+}
+.promo-container .promo-text {
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 1em;
+  background-color: #E7DEFE;
+}
+
+#call-to-action .primary-button {
+  margin: 25px 0;
 }
 
 .footer {

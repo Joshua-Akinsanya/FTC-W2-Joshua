@@ -152,19 +152,19 @@
 
                 <div id="with-spendin" class="spendin-list-container">
                     <h3 class="list-title">Track Business Expenses until its Milisecond</h3>
-                    <ul class="spendin-list goodlist">
-                        <li>Analyze your business cost easily with group transaction thorugh tagging feature.</li>
-                        <li>Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.</li>
-                        <li>Arrange your business expenses by date, name, etc., with just one click.</li>
+                    <ul class="spendin-list list">
+                        <li class="greentick-li">Analyze your business cost easily with group transaction thorugh tagging feature.</li>
+                        <li class="greentick-li">Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.</li>
+                        <li class="greentick-li">Arrange your business expenses by date, name, etc., with just one click.</li>
                     </ul>
                     <img src="images/stats-good.svg" alt="" class="stats" loading="lazy">
                 </div>
                 <div id="without-spendin" class="spendin-list-container">
                     <h3 class="list-title">Taking too long to tidy up administrative files makes it unproductive</h3>
-                    <ul class="spendin-list badlist">
-                        <li>Complex recording process due to every administrative file in a different place.</li>
-                        <li>Need more effort to pay manually one by one invoice because there is no payment accommodation.</li>
-                        <li>Manual data arranging needs a long time because the different months/years are not in the same place.</li>
+                    <ul class="spendin-list list">
+                        <li class="redcross-li">Complex recording process due to every administrative file in a different place.</li>
+                        <li class="redcross-li">Need more effort to pay manually one by one invoice because there is no payment accommodation.</li>
+                        <li class="redcross-li">Manual data arranging needs a long time because the different months/years are not in the same place.</li>
                     </ul>
                     <img src="images/stats-bad.svg" alt="" class="stats" loading="lazy">
                 </div>
@@ -219,33 +219,36 @@
         </section>
 
         <section id="pricing" class="section section-whitebg">
-            <h1 class="pricing-header">Ready to Get Started?</h1>
+            <h1 class="pricing-heading">Ready to Get Started?</h1>
             <p class="section-subtext">Choose a plan that suits your business needs</p>
             
             <!--we'll style when we add javascript-->
-            <div>
-                <p>Monthly</p>
-                <input type="checkbox" name="" id="">
-                <p>Yearly</p>
-                <span>Save 65%</span>
+            <div class="promo-container">
+                <p class="promo-option">Monthly</p>
+                <input type="checkbox" name="promo-checkbox" id="promo-checkbox">
+                <label for="promo-checkbox"></label>
+                <p class="promo-option">Yearly</p>
+                <span class="promo-text">Save 65%</span>
                 <img src="icons/arrow-scribbly.svg" alt="" loading="lazy">
             </div>
 
             <div>
-                <div class="pricecard">
-                    <img src="icons/free-tier.svg" alt="" loading="lazy">
-                    <h2>Free</h2>
+                <div class="userplan-card">
+                    <div class="plan-logotitle-group">
+                        <img src="icons/free-tier.svg" alt="" class="plan-icon" loading="lazy">
+                        <h2 class="plan-title">Free</h2>
+                    </div>
                     <p>Perfect plan to get started</p>
-                    <p>$0 /month</p>
+                    <p class="price"><span class="price-bold">$0</span> /month</p>
                     <p class="darker">A free plan grants you access to some cool features of Spend.In.</p>
 
-                    <ul>
-                        <li>Sync accross device</li>
-                        <li>5 workspace</li>
-                        <li>Collaborate with 5 user</li>
-                        <li>Sharing permission</li>
-                        <li>Admin tools</li>
-                        <li>100+ integrations</li>
+                    <ul class="features-list list">
+                        <li class="greentick-li">Sync accross device</li>
+                        <li class="greentick-li">5 workspace</li>
+                        <li class="greentick-li">Collaborate with 5 user</li>
+                        <li class="graycross-li">Sharing permission</li>
+                        <li class="graycross-li">Admin tools</li>
+                        <li class="graycross-li">100+ integrations</li>
                     </ul>
                     
                     <a href="" class="primary-button">Get Your Free Plan</a>
@@ -254,12 +257,14 @@
         </section>
 
         <section id="call-to-action" class="section">
-            <h1 class="section-title">DOWNLOAD NOW!</h1>
-            <h2 class="section-headline">Start Track Your Business Expenses Today</h2>
-            <p class="section-subtext">Are you ready to make your business more organized? Download Spend.In now!</p>
+            <div class="section-header">
+                <h1 class="section-title">DOWNLOAD NOW!</h1>
+                <h2 class="section-headline">Start Track Your Business Expenses Today</h2>
+                <p class="section-subtext">Are you ready to make your business more organized? Download Spend.In now!</p>
+            </div>
             <a href="" class="primary-button">Get a Free Demo</a>
-            <img src="images/spending-stats.svg" alt="" loading="lazy">
-            <img src="images/spend-category.svg" alt="" loading="lazy">
+            <img src="images/spending-stats.svg" alt="" class="stat-img" loading="lazy">
+            <img src="images/spend-category.svg" alt="" class="stat-img" loading="lazy">
         </section>
     </main>
 
