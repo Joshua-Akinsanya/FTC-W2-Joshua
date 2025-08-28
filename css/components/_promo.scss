@@ -1,0 +1,45 @@
+@use "../abstracts/index" as *;
+
+.promo-container {
+    position: relative;
+
+    .promo-options {
+        @include flex($gap: 16px);
+    }
+    .promo-option {
+        display: inline-block;
+        @include text-style(1.25rem, 600, $black0c)
+    }
+
+    #promo-checkbox {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .circle-slider {
+        display: inline-block;
+        position: relative;
+        width: 70px;
+        height: 36px;
+        background-color: $primary-color-mid;
+        border-radius: 9999px;
+        cursor: pointer;
+    }
+    .circle-slider::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 28px;
+        height: 28px;
+        background-color: $white;
+        border-radius: 9999px;
+    }
+
+    .promo-text {
+        display: inline-block;
+        @include rounded();
+        background-color: $primary-color-vlight;
+        color: $primary-color-dark;
+    }
+}
