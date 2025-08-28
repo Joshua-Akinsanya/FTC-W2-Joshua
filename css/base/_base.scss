@@ -1,0 +1,43 @@
+@use "../abstracts/index" as *;
+
+body {
+    background-color: $primary-color-dark;
+    color: $white;
+}
+
+.hidden { display: none }
+
+.section, .footer {
+    padding: 30px;
+}
+.section-link {
+    @include flex();
+    height: 3em;
+    color: $grey-dark;
+    cursor: pointer;
+}
+// Contains 'section-title', 'section-headline' and 'section-subtext'
+.section-header {
+    margin-bottom: 2em;
+}
+.section-title {
+    @include text-style(0.75rem, 600, $primary-color-mid);
+}
+.section-headline {
+    @include text-style(1.5rem, 700);
+    margin-bottom: 0.5em;
+}
+
+.section-whitebg {
+    @include white-bg();
+    .section-headline {
+        color: $primary-color-dark;
+    }
+    p { color: $grey-dark }
+}
+
+@media (min-width: 768px) {
+    .sm-screen-only {
+        display: none;
+    }
+}

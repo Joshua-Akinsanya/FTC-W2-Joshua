@@ -1,20 +1,19 @@
-@use "mixins" as mix;
-@use "variables" as var;
+@use "../abstracts/index" as *;
 
 .userplan-card {
-    background-color: var.$white-ed;
+    background-color: $white-ed;
     margin-top: 30px;
     border-radius: 10px;
     padding: 30px;
     .plan-logotitle-group {
-        @include mix.flex(row, 1rem, flex-start);
+        @include flex(row, 1rem, flex-start);
     }
     .plan-title, .plan-icon { display: inline-block }
 }
 
 .price { margin: 25px 0}
 .price-bold {
-    @include mix.text-style(2em, 600, var.$primary-color-dark);
+    @include text-style(2em, 600, $primary-color-dark);
 }
 
 .features-list {

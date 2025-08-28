@@ -1,0 +1,38 @@
+@use "../abstracts/index" as *;
+
+// To be continued
+.slider-container {
+    background-color: grey;
+    height: 3em;
+    margin-bottom: 2em;
+}
+
+.spendin-list-container {
+    @include flex(column, 1.5em, $align: first baseline);
+    width: 100%;
+}
+
+.list-title {
+    @include text-style($wt: 700, $color: $primary-color-dark);
+}
+.spendin-list li {
+    @include text-style(0.75rem, 500, $primary-color-dark);
+}
+.greentick-li { //Green circles with tick
+    @include custom-li('../icons/tick-circle.svg');
+}
+.redcross-li {
+    @include custom-li('../icons/cross-circle-red.svg');
+}
+.graycross-li {
+    @include custom-li('../icons/cross-circle-grey.svg');
+}
+
+.list li {
+    padding-bottom: 1.25em;
+}
+
+.stats {
+    align-self: center;
+    border-radius: 8px;
+}

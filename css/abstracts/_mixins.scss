@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "variables" as *;
 
 @mixin flex($direct: row, $gap: 0, $justify: center, $align: center) {
     display: flex;
@@ -13,7 +13,7 @@
     padding: 1em;
 }
 
-@mixin primary-btn($color: var.$white, $bg-color: var.$primary-color-mid) {
+@mixin primary-btn($color: $white, $bg-color: $primary-color-mid) {
     @include flex();
     border-radius: 9999px;
     color: $color;
@@ -41,8 +41,8 @@
 }
 
 @mixin white-bg() {
-    background-color: var.$white;
-    color: var.$primary-color-dark;
+    background-color: $white;
+    color: $primary-color-dark;
 }
 
 @mixin custom-li($url) {

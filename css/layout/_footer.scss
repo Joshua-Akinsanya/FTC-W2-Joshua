@@ -1,0 +1,46 @@
+@use "../abstracts/index" as *;
+
+.footer {
+    @include white-bg();
+    .brand {
+        @include text-style(1.5rem, 700, $black222);
+        svg g path {
+            fill: $primary-color-mid;
+        }
+    }
+}
+
+.footer-header {
+    @include flex(column, 16px, flex-start, first baseline);
+    margin-bottom: 20px
+}
+.footer-subtext {
+    @include text-style(1.125rem, 400, $grey-dark);
+}
+
+.footer-grid {
+    margin: 1.125rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.footer-column {
+    @include flex(column, 0.75rem, $align: first baseline);
+}
+.footer-column-header {
+    @include text-style(1.25rem, 600, $black222);
+}
+.footer-link {
+    @include text-style($color: $grey-dark);
+}
+.footer-bottom {
+    padding-top: 1.125rem;
+    border-top: solid 1px $primary-color-light;
+    @include flex(column, 16px, flex-start, first baseline);
+}
+.policy { @include text-style(1.125rem, 600, $black222) }
+
+.copyright {
+    @include text-style($wt: 500, $color: $grey-dark);
+    line-height: 1.5;
+}

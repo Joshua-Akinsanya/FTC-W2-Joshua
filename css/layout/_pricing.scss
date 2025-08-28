@@ -1,0 +1,19 @@
+@use "../abstracts/index" as *;
+
+#pricing {
+    .pricing-heading {
+        @include text-style(1.5rem, 700, $primary-color-dark, center);
+    }
+}
+
+.promo-container {
+    .promo-option {
+        display: inline-block;
+        @include text-style(1.25rem, 600, $black0c)
+    }
+    .promo-text {
+        display: inline-block;
+        @include rounded();
+        background-color: $primary-color-vlight;
+    }
+}

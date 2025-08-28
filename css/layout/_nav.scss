@@ -1,10 +1,8 @@
-@use "mixins" as mix;
-@use "variables" as var;
-
+@use "../abstracts/index" as *;
 
 // Logo + Company Name in Main style
 .nav {
-    @include mix.flex($justify: space-between);
+    @include flex($justify: space-between);
     height: 5rem;
     padding: 0 0 0 25px;
     border-bottom: solid 1px #FFFFFF29;
@@ -41,15 +39,15 @@
     .nav-menubtn { display: none }
 
     .nav-menu {
-        @include mix.flex($gap:1em);
+        @include flex($gap:1em);
         height: 100%;
     }
     .navmenu-option {
-        @include mix.text-style(1.125rem, 500, $color: var.$white357);
+        @include text-style(1.125rem, 500, $color: $white357);
         height: 100%;
-        @include mix.flex()
+        @include flex()
     }
     .nav-ctalink {
-        @include mix.text-style($color: var.$grey-light)
+        @include text-style($color: $grey-light)
     }
 }

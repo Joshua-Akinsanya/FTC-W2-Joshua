@@ -1,0 +1,15 @@
+@use "../abstracts/index" as *;
+
+//Brand Component = Logo + Company Name
+
+.brand {
+    @include text-style($size: 1.125rem, $color: $white357);
+
+    //keep name , gap and logo size proportional
+    @include flex($gap: calc(1em * 7 / 12));
+    .logo { height: calc(1em * 7 / 6) }
+    .companyname {
+        font-family: 'Space Grotesk';
+        font-size: 1em;
+    }
+}

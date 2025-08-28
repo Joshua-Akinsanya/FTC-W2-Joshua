@@ -1,0 +1,35 @@
+@use "../abstracts/index" as *;
+
+.testimonial {
+    background-color: $black222;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+    .testimonial-text {
+        @include flex(column, 20px, $align: first baseline);
+    }
+    .client-info {
+        $pic-size: 58px;
+
+        margin-top: 1.5rem;
+        border-top: solid 1px $grey-mid;
+        padding-top: 1.5rem;
+        display: inline-grid;
+        width: 100%;
+        grid-template-columns:  $pic-size 1fr;
+        column-gap: 1rem;
+
+        .client-pic {
+            aspect-ratio: 1 / 1;
+            height: $pic-size;
+            grid-row: 1 / span 2;
+        }
+        .client-name {
+            color: $white357; //Inherits white from the body already so could remove this
+        }
+        .client-role {
+            color: $grey-light;
+        }
+    }
+}

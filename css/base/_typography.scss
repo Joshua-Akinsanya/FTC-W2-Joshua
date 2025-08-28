@@ -1,0 +1,9 @@
+@use "../abstracts/index" as *;
+
+:root {
+    font-size: 16px;
+}
+
+// Also applies 1.5 line height and 400 font-weight
+p { @include text-style(0.875rem) }
+.section-subtext { color: $grey-mid }

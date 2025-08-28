@@ -1,0 +1,33 @@
+@use "../abstracts/index" as *;
+
+/*
+
+*********************************
+*               *               *
+*       1       *       2       *
+*               *               *
+*********************************
+*                               *
+*               3               *
+*                               *
+*********************************
+
+*/
+
+.benefit-grid {
+    $icon-length: 32px;
+    display: grid;
+    grid-template-columns: $icon-length 1fr;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    .benefit-icon {
+        width: $icon-length;
+        height: $icon-length;
+    }
+    .benefit-column {
+        @include flex(column, $align: first baseline);
+        gap: 0.75em;
+    }
+}
+.benefit-title { @include text-style($wt: 600) }
