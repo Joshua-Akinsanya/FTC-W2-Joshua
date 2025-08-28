@@ -1,7 +1,7 @@
 @use "../abstracts/index" as *;
 
 :root {
-    font-size: 16px;
+    font-size: $root-font-size;
 }
 
 // Also applies 1.5 line height and 400 font-weight

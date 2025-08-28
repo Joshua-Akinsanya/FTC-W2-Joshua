@@ -11,4 +11,13 @@ $blackb15: #040815; //blue 15 is more significant here
 $black0c: #0C0C0C;
 $white: #F5F5F5;
 $white357: #F3F5F7; // f-357
-$white-ed: #EDEDED
+$white-ed: #EDEDED;
+
+$font-stack: 'Plus Jakarta Sans', 'Arial', 'sans-serif';
+$root-font-size: 16px;
+
+// Mobile breakpoint not included as we're using Mobile-first approach
+$breakpoints: (
+    tablet: 768px,
+    desktop: 992px
+);

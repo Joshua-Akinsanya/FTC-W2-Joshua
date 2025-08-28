@@ -52,3 +52,18 @@
     background-size: 1rem;
     padding-left: 30px;
 }
+
+// size values could be tablet or desktop
+// check variables file for breakpoints map
+
+@mixin respond($size) {
+    $width: map-get($breakpoints, $size);
+    @if $width {
+        @media (min-width: $width) {
+            @content;
+        }
+    }
+    @else {
+        @warn "`#{$size}` is not a valid breakpoint. Check breakpoints in variables file for all possible values"
+    }
+}
