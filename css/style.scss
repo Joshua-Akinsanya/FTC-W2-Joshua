@@ -230,6 +230,9 @@ p { @include index.text-style(0.875rem) }
 #call-to-action .primary-button {
     margin: 25px 0;
 }
+.stat-img {
+    border-radius: 8px;
+}
 
 .footer {
     @include index.white-bg();

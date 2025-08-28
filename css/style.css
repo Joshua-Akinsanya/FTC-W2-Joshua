@@ -432,6 +432,10 @@ p {
   margin: 25px 0;
 }
 
+.stat-img {
+  border-radius: 8px;
+}
+
 .footer {
   background-color: #F5F5F5;
   color: #0D121F;
