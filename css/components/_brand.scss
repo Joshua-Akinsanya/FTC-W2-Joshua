@@ -9,7 +9,7 @@
     @include flex($gap: calc(1em * 7 / 12));
     .logo { height: calc(1em * 7 / 6) }
     .companyname {
-        font-family: 'Space Grotesk';
+        font-family: $brand-font;
         font-size: 1em;
     }
 }

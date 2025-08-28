@@ -1,5 +1,11 @@
 @use "../abstracts/index" as *;
+@use "sass:color";
 
 .primary-button {
     @include primary-btn();
+    transition: background 0.3s ease;
+    &:hover {
+        // primary buttons are by default $primary-color-mid change
+        background-color: color.adjust($color: $primary-color-mid, $lightness: 12%)
+    }
 }

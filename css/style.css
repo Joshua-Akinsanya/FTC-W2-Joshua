@@ -27,6 +27,14 @@ body {
   color: #F5F5F5;
 }
 
+a {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: #C3D4E9;
+}
+
 .hidden {
   display: none;
 }
@@ -113,7 +121,7 @@ p {
   height: 1.1666666667em;
 }
 .brand .companyname {
-  font-family: "Space Grotesk";
+  font-family: "Space Grotesk", "Arial", "sans-serif";
   font-size: 1em;
 }
 
@@ -126,8 +134,12 @@ p {
   border-radius: 9999px;
   color: #F5F5F5;
   background-color: #7C5CFC;
-  height: 3em;
+  padding: 1em;
   text-align: center;
+  transition: background 0.3s ease;
+}
+.primary-button:hover {
+  background-color: rgb(172.2963855422, 152.0939759036, 253.1060240964);
 }
 
 .userplan-card {
@@ -219,66 +231,81 @@ p {
   gap: 0;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: max(88px, 3em);
   padding: 0 0 0 25px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1607843137);
+  font-size: 1.125rem;
 }
-
-.nav-menubtn {
+.nav .nav-menubtn {
   cursor: pointer;
   height: 100%;
   width: 5rem;
   padding: 0 1.25rem;
   transition: background-color 0.2s ease;
 }
-.nav-menubtn svg {
+.nav .nav-menubtn svg {
   width: 1.25rem;
   height: 1.25rem;
 }
-.nav-menubtn:hover {
+.nav .nav-menubtn:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
-
-.nav-menu {
+.nav .nav-menu {
   display: none;
 }
-
-@media (min-width: 1024px) {
+.nav .nav-cta {
+  display: none;
+}
+@media (min-width: 992px) {
   .nav {
+    height: max(100px, 3em);
     padding: 0 30px;
   }
-  .nav-menubtn {
+  .nav .nav-menubtn {
     display: none;
   }
-  .nav-menu {
+  .nav .nav-menu {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 2em;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
-  .navmenu-option {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.5;
-    text-align: left;
-    color: #F3F5F7;
-    height: 100%;
+  .nav .navmenu-option {
     display: flex;
     flex-direction: row;
     gap: 0;
     justify-content: center;
     align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    color: #F3F5F7;
+    height: 100%;
   }
-  .nav-ctalink {
+  .nav .nav-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
     color: #C3D4E9;
   }
+  .nav .nav-ctalink {
+    padding: 1em;
+    transition: transform 0.2s ease;
+  }
+  .nav .nav-ctalink:hover {
+    color: hsl(213.1578947368, 46.3414634146%, 158.9215686275%);
+  }
 }
+
 .footer {
   background-color: #F5F5F5;
   color: #0D121F;

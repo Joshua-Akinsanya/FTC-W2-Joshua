@@ -5,6 +5,8 @@ body {
     color: $white;
 }
 
+a { @include text-style($color: $grey-light) }
+
 .hidden { display: none }
 
 .section, .footer {

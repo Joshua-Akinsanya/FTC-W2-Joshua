@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "sass:map";
 
 @mixin flex($direct: row, $gap: 0, $justify: center, $align: center) {
     display: flex;
@@ -18,7 +19,7 @@
     border-radius: 9999px;
     color: $color;
     background-color: $bg-color;
-    height: 3em;
+    padding: 1em;
     text-align: center;
 }
 
@@ -57,7 +58,7 @@
 // check variables file for breakpoints map
 
 @mixin respond($size) {
-    $width: map-get($breakpoints, $size);
+    $width: map.get($breakpoints, $size);
     @if $width {
         @media (min-width: $width) {
             @content;
