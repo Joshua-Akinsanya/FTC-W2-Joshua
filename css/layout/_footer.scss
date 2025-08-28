@@ -8,6 +8,23 @@
             fill: $primary-color-mid;
         }
     }
+
+    @include respond(desktop) {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        
+        .footer-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .footer-bottom {
+            @include flex($justify: flex-start, $gap: 30px);
+            grid-column: 1 / span 2;
+
+            .copyright {
+                margin-left: auto;
+            }
+        }
+    }
 }
 
 .footer-header {

@@ -321,6 +321,26 @@ p {
 .footer .brand svg g path {
   fill: #7C5CFC;
 }
+@media (min-width: 992px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+  .footer .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column: 1/span 2;
+  }
+  .footer .footer-bottom .copyright {
+    margin-left: auto;
+  }
+}
 
 .footer-header {
   display: flex;
