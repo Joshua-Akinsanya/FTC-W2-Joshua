@@ -4,4 +4,7 @@
     .pricing-heading {
         @include text-style(1.5rem, 700, $primary-color-dark, center);
     }
+    .plan-container {
+        @include respond(desktop);
+    }
 }

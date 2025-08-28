@@ -19,13 +19,13 @@
     @include text-style(0.75rem, 500, $primary-color-dark);
 }
 .greentick-li { //Green circles with tick
-    @include custom-li('../icons/tick-circle.svg');
+    @include custom-li('../../assets/icons/tick-circle.svg');
 }
 .redcross-li {
-    @include custom-li('../icons/cross-circle-red.svg');
+    @include custom-li('../../assets/icons/cross-circle-red.svg');
 }
 .graycross-li {
-    @include custom-li('../icons/cross-circle-grey.svg');
+    @include custom-li('../../assets/icons/cross-circle-grey.svg');
 }
 
 .list li {

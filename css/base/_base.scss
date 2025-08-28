@@ -10,7 +10,7 @@ a { @include text-style($color: $grey-light) }
 .hidden { display: none }
 
 .section, .footer {
-    padding: 30px;
+    padding: 50px 30px;
 }
 .section-link {
     @include flex();
