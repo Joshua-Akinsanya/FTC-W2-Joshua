@@ -21,7 +21,7 @@ body {
 }
 
 // Base styles
-.section {
+.section, .footer {
     padding: 30px;
 }
 // Also applies 1.5 line height and 400 font-weight
@@ -242,17 +242,42 @@ p { @include index.text-style(0.875rem) }
             fill: index.$primary-color-mid;
         }
     }
-
-    h3 { @include index.text-style(1.25rem, 600, index.$black222) }
-    a.link { line-height: 1.5 }
-
-    a.policy { @include index.text-style(1.125rem, 600, index.$black222) }
-
-    .copyright {
-        @include index.text-style($wt: 500, $color: index.$grey-dark);
-        line-height: 1.5;
-    }
 }
+.footer-header {
+    @include index.flex(column, 16px, flex-start, first baseline);
+    margin-bottom: 20px
+}
+.footer-subtext {
+    @include index.text-style(1.125rem, 400, index.$grey-dark);
+}
+
+.footer-grid {
+    margin: 1.125rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.footer-column {
+    @include index.flex(column, 0.75rem, $align: first baseline);
+}
+.footer-column-header {
+    @include index.text-style(1.25rem, 600, index.$black222);
+}
+.footer-link {
+    @include index.text-style($color: index.$grey-dark);
+}
+.footer-bottom {
+    padding-top: 1.125rem;
+    border-top: solid 1px index.$primary-color-light;
+    @include index.flex(column, 16px, flex-start, first baseline);
+}
+.policy { @include index.text-style(1.125rem, 600, index.$black222) }
+
+.copyright {
+    @include index.text-style($wt: 500, $color: index.$grey-dark);
+    line-height: 1.5;
+}
+
 
 // Media Queries
 
