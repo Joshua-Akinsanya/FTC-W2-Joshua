@@ -685,4 +685,49 @@ p {
 }
 .testimonial .client-info .client-role {
   color: #C3D4E9;
+}
+
+@media (min-width: 992px) {
+  #testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  #testimonials .section-header {
+    grid-column: 1/span 3;
+  }
+  #testimonials .section-title, #testimonials .section-headline, #testimonials .section-subtext {
+    text-align: center;
+  }
+  #testimonials .section-title, #testimonials .section-subtext {
+    font-size: 1.25rem;
+  }
+  #testimonials .section-headline {
+    font-size: 2.5rem;
+  }
+  #testimonials .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  #testimonials .testimonial-title {
+    font-size: 1.125rem;
+  }
+  #testimonials .testimonial-subtext {
+    font-size: 1rem;
+  }
+  #testimonials .client-name {
+    font-size: 1.125rem;
+  }
+  #testimonials .client-role {
+    font-size: 0.875rem;
+  }
+  #testimonials .client-info {
+    margin-top: auto;
+  }
+  #testimonials .testimonial-text {
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

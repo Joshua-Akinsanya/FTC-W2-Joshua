@@ -32,4 +32,34 @@
             color: $grey-light;
         }
     }
+
+}
+
+// Desktop styles
+
+#testimonials {
+    @include respond(desktop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .section-header { grid-column: 1 / span 3 }
+        
+        .section-title, .section-headline, .section-subtext {
+            text-align: center;
+        }
+        .section-title, .section-subtext { font-size: 1.25rem }
+        .section-headline { font-size: 2.5rem }
+
+        .testimonial { @include flex(column) }
+        
+        .testimonial-title { font-size: 1.125rem }
+        .testimonial-subtext { font-size: 1rem }
+        
+        .client-name { font-size: 1.125rem }
+        .client-role { font-size: 0.875rem }
+        
+        .client-info { margin-top: auto } //Bring all client info to same level
+        .testimonial-text { margin-bottom: 1rem } //Put space between text and client info
+    }
 }
