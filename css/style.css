@@ -143,6 +143,11 @@ p {
   line-height: 1.5;
   text-align: left;
 }
+@media (min-width: 992px) {
+  p {
+    font-size: 1rem;
+  }
+}
 
 .section-subtext {
   color: #90A3BF;
@@ -711,7 +716,7 @@ p {
 }
 
 .benefits-layout-1 {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 @media (min-width: 992px) {
   .benefits-layout-1 {
@@ -723,6 +728,7 @@ p {
     margin: 0;
   }
   .benefits-layout-1 .section-header {
+    margin: 0;
     grid-column: 1/span 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -746,6 +752,7 @@ p {
   .benefits-layout-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
   .benefits-layout-2 .section-header {
     grid-column: 1/span 2;
@@ -757,7 +764,7 @@ p {
 }
 @media (min-width: 992px) {
   .header-group {
-    width: max(245px, 70%);
+    width: max(245px, 90%);
   }
 }
 
@@ -766,9 +773,15 @@ p {
 }
 .benefit-column .col-img {
   margin-bottom: 24px;
+  width: 100%;
 }
 .benefit-column .benefit-title {
   margin-bottom: 12px;
+}
+@media (min-width: 992px) {
+  .benefit-column .benefit-title {
+    font-size: 1.5rem;
+  }
 }
 
 .benefit-grid {
@@ -789,12 +802,22 @@ p {
   align-items: first baseline;
   gap: 0.75em;
 }
+@media (min-width: 992px) {
+  .benefit-grid .benefit-text {
+    gap: 0;
+  }
+}
 
 .benefit-title {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
   text-align: left;
+}
+@media (min-width: 992px) {
+  .benefit-title {
+    font-size: 1.5rem;
+  }
 }
 
 #call-to-action .primary-button {

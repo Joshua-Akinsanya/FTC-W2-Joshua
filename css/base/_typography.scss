@@ -5,5 +5,10 @@
 }
 
 // Also applies 1.5 line height and 400 font-weight
-p { @include text-style(0.875rem) }
+p {
+    @include text-style(0.875rem);
+    @include respond(desktop){
+        font-size: 1rem;
+    }
+}
 .section-subtext { color: $grey-mid }

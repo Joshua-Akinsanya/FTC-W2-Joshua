@@ -1,7 +1,7 @@
 @use "../abstracts/index" as *;
 
 .benefits-layout-1 {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
 
     @include respond(desktop) {
 
@@ -12,6 +12,7 @@
             margin: 0;
         }
         .section-header {
+            margin: 0;
             grid-column: 1 / span 3;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -35,7 +36,7 @@
     @include respond(desktop) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        align-items: center;
         .section-header {
             grid-column: 1 / span 2;
         }
@@ -45,7 +46,7 @@
 .header-group {
     width: max(153px,50%);
     @include respond(desktop) {
-        width: max(245px, 70%)
+        width: max(245px, 90%)
     }
 }
 
@@ -53,9 +54,15 @@
     margin-bottom: 40px;
     .col-img {
         margin-bottom: 24px;
+        width: 100%;
     }
     .benefit-title {
         margin-bottom: 12px;
+    }
+    @include respond(desktop) {
+        .benefit-title {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -73,6 +80,12 @@
     .benefit-text {
         @include flex(column, $align: first baseline);
         gap: 0.75em;
+        @include respond(desktop){ gap: 0;}
     }
 }
-.benefit-title { @include text-style($wt: 600) }
+.benefit-title {
+    @include text-style($wt: 600);
+    @include respond(desktop) {
+        font-size: 1.5rem;
+    }
+}
