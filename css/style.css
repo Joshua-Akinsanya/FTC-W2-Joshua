@@ -190,6 +190,21 @@ p {
   }
 }
 
+.slider-container {
+  background-color: #F3F5F7;
+  border-radius: 9999px;
+  margin-bottom: 2em;
+}
+.slider-container .button {
+  border-radius: 9999px;
+  padding: 1em;
+  color: #90A3BF;
+}
+.slider-container .active {
+  color: #F5F5F5;
+  background-color: #7C5CFC;
+}
+
 .userplan-card {
   background-color: #EDEDED;
   margin-top: 30px;
@@ -598,12 +613,6 @@ p {
   text-align: center;
   color: #0D121F;
 }
-.slider-container {
-  background-color: grey;
-  height: 3em;
-  margin-bottom: 2em;
-}
-
 .spendin-list-container {
   display: flex;
   flex-direction: column;

@@ -1,11 +1,6 @@
 @use "../abstracts/index" as *;
 
-// To be continued
-.slider-container {
-    background-color: grey;
-    height: 3em;
-    margin-bottom: 2em;
-}
+// Button container is located in the buttons file
 
 .spendin-list-container {
     @include flex(column, 1.5em, $align: first baseline);

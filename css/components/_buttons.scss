@@ -28,3 +28,19 @@
         }
     }
 }
+
+// To be continued
+.slider-container {
+    background-color: $white357;
+    border-radius: 9999px;
+    margin-bottom: 2em;
+
+    .button {
+        @include rounded();
+        color: $grey-mid;
+    }
+    .active {
+        color: $white;
+        background-color: $primary-color-mid;
+    }
+}
