@@ -24,7 +24,16 @@ img {
 
 body {
   background-color: #0D121F;
+  background-image: url("../../assets/backgrounds/circular-blur-top-left.png"), url("../../assets/backgrounds/ellipse-top-right.png");
+  background-position: top left, top right;
+  background-repeat: no-repeat;
+  background-size: 60vw, min(60vw, 225px);
   color: #F5F5F5;
+}
+@media (min-width: 992px) {
+  body {
+    background-size: 55vw, min(30vw, 500px);
+  }
 }
 
 a {
@@ -41,6 +50,30 @@ a {
 
 .section, .footer {
   padding: 50px 30px;
+}
+
+.section {
+  background-image: url("../../assets/backgrounds/circular-blur-top-left.png"), url("../../assets/backgrounds/circular-blur-bottom-right.png");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-size: 60vw;
+}
+@media (min-width: 992px) {
+  .section {
+    background-size: min(50vw, 444px);
+  }
+}
+
+#hero-section {
+  background-image: url("../../assets/backgrounds/ellipse-bottom-left.png"), url("../../assets/backgrounds/circular-blur-bottom-right.png");
+  background-repeat: no-repeat;
+  background-position: bottom left, bottom right;
+  background-size: min(60vw, 225px), 60vw;
+}
+@media (min-width: 992px) {
+  #hero-section {
+    background-size: min(30vw, 500px), 55vw;
+  }
 }
 
 .section-link {
@@ -77,6 +110,7 @@ a {
 .section-whitebg {
   background-color: #F5F5F5;
   color: #0D121F;
+  background-image: none;
 }
 .section-whitebg .section-headline {
   color: #0D121F;

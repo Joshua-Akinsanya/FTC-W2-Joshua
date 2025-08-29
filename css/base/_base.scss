@@ -2,7 +2,16 @@
 
 body {
     background-color: $primary-color-dark;
+    background-image: url('../../assets/backgrounds/circular-blur-top-left.png'),
+        url('../../assets/backgrounds/ellipse-top-right.png');
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    background-size: 60vw, min(60vw, 225px);
     color: $white;
+
+    @include respond(desktop) {
+        background-size: 55vw, min(30vw, 500px);
+    }
 }
 
 a { @include text-style($color: $grey-light) }
@@ -11,6 +20,28 @@ a { @include text-style($color: $grey-light) }
 
 .section, .footer {
     padding: 50px 30px;
+}
+.section {
+    background-image: url('../../assets/backgrounds/circular-blur-top-left.png'),
+        url('../../assets/backgrounds/circular-blur-bottom-right.png');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: 60vw;
+    
+    @include respond(desktop) {
+        background-size: min(50vw, 444px);
+    }
+}
+#hero-section {
+    background-image: url('../../assets/backgrounds/ellipse-bottom-left.png'),
+        url('../../assets/backgrounds/circular-blur-bottom-right.png');
+    background-repeat: no-repeat;
+    background-position: bottom left, bottom right;
+    background-size: min(60vw, 225px), 60vw;
+    
+    @include respond(desktop) {
+        background-size: min(30vw, 500px), 55vw;
+    }
 }
 .section-link {
     @include flex();
@@ -32,6 +63,7 @@ a { @include text-style($color: $grey-light) }
 
 .section-whitebg {
     @include white-bg();
+    background-image: none;
     .section-headline {
         color: $primary-color-dark;
     }
