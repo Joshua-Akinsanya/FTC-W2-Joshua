@@ -1,0 +1,21 @@
+@use "../abstracts/index" as *;
+
+.arrow-group {
+    display: none;
+
+    @include respond(desktop) {
+        @include flex($gap: 22px);
+    
+        .arrow {
+            @include flex();
+            @include rounded();
+            background-color: $black222;
+            height: 50px;
+            width: 50px;
+        }
+        .arrow.active {
+            background-color: $primary-color-mid;
+            box-shadow: 4px 8px 24px $shadow-color;
+        }
+    }
+}

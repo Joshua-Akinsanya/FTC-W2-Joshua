@@ -1,7 +1,7 @@
-import sideMenu from "./sidemenu.js";
+import SideMenu from "./sidemenu.js";
 import Breakpoints from "./breakpoints.js";
 
-const mobileNavmenu = new sideMenu('#sidemenu');
+const mobileNavmenu = new SideMenu('#sidemenu');
 
 const openMenuButton = document.querySelector('#open-menu-button');
 const closeMenuButton = document.querySelector('#close-menu-button');

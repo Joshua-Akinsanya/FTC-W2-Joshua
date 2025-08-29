@@ -1,4 +1,4 @@
-export default class sideMenu {
+export default class SideMenu {
     constructor(id) {
         this.menuObj = document.querySelector(id);
         this.openState = false;

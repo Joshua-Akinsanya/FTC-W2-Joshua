@@ -55,5 +55,9 @@
         
         .client-info { margin-top: auto } //Bring all client info to same level
         .testimonial-text { margin-bottom: 1rem } //Put space between text and client info
+
+        .arrow-group {
+            grid-column: 1 / span 3;
+        }
     }
 }

@@ -243,7 +243,7 @@
                     </ul>
                     <img src="assets/images/stats-good.svg" alt="image showing advantage of spend.in based on statistics" class="stats" loading="lazy">
                 </div>
-                <div id="without-spendin" class="spendin-list-container">
+                <div id="without-spendin" class="spendin-list-container hidden">
                     <h3 class="list-title">Taking too long to tidy up administrative files makes it unproductive</h3>
                     <ul class="spendin-list list">
                         <li class="redcross-li">Complex recording process due to every administrative file in a different place.</li>
@@ -300,8 +300,20 @@
                 </div>
             </div>
             <div class="arrow-group">
-                <img src="assets/icons/arrow-left.svg" alt="">
-                <img src="assets/icons/arrow-right.svg" alt="">
+                <div class="arrow">
+                    <!--Left Arrow-->
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.1775 4.44727L2.625 8.99977L7.1775 13.5523" stroke="#C3D4E9" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.3749 9H2.75244" stroke="#C3D4E9" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="arrow active">
+                    <!--Right Arrow-->
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8225 4.44727L15.375 8.99977L10.8225 13.5523" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.625 9H15.2475" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
         </section>
 

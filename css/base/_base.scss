@@ -16,7 +16,8 @@ body {
 
 a { @include text-style($color: $grey-light) }
 
-.hidden { display: none }
+// Anything with class 'hidden' must be hidden
+.hidden { display: none !important }
 
 .section, .footer {
     padding: 50px 30px;
