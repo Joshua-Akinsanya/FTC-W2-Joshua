@@ -1,18 +1,63 @@
 @use "../abstracts/index" as *;
 
-/*
+.benefits-layout-1 {
+    margin-bottom: 40px;
 
-*********************************
-*               *               *
-*       1       *       2       *
-*               *               *
-*********************************
-*                               *
-*               3               *
-*                               *
-*********************************
+    @include respond(desktop) {
 
-*/
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px;
+        .benefit-column {
+            margin: 0;
+        }
+        .section-header {
+            grid-column: 1 / span 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            align-items: end;
+            .header-group {
+                .section-title, .section-headline {
+                    text-align: left;
+                }
+                .section-headline {margin: auto;}
+            }
+            .section-subtext {
+                text-align: left;
+                max-width: 500px;
+                grid-column: 2 / span 2;
+            }
+        }
+    }
+}
+.benefits-layout-2 {
+    @include respond(desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .section-header {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+.header-group {
+    width: max(153px,50%);
+    @include respond(desktop) {
+        width: max(245px, 70%)
+    }
+}
+
+.benefit-column {
+    margin-bottom: 40px;
+    .col-img {
+        margin-bottom: 24px;
+    }
+    .benefit-title {
+        margin-bottom: 12px;
+    }
+}
 
 .benefit-grid {
     $icon-length: 32px;
@@ -25,7 +70,7 @@
         width: $icon-length;
         height: $icon-length;
     }
-    .benefit-column {
+    .benefit-text {
         @include flex(column, $align: first baseline);
         gap: 0.75em;
     }
