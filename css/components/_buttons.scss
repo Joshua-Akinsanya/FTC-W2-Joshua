@@ -46,7 +46,9 @@
 
     .button {
         @include rounded();
+        @include text-style(1rem, 600, $white);
         color: $grey-mid;
+        cursor: pointer;
     }
     .active {
         color: $white;

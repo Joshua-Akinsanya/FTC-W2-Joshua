@@ -2,9 +2,34 @@
 
 // Button container is located in the buttons file
 
+#increase-productivity {
+    .section-header {
+        .section-title, .section-headline {
+            text-align: left;
+        }
+    }
+
+}
 .spendin-list-container {
     @include flex(column, 1.5em, $align: first baseline);
     width: 100%;
+
+    @include respond(desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 100px;
+
+        .list-title {
+            align-self: end;
+        }
+        .spendin-list {
+            align-self: center;
+        }
+        .stats {
+            grid-row: 1 / span 2;
+            grid-column: 2;
+        }
+    }
 }
 
 .list-title {

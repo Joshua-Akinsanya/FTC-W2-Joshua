@@ -245,7 +245,13 @@ p {
 .slider-container .button {
   border-radius: 9999px;
   padding: 1em;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  color: #F5F5F5;
   color: #90A3BF;
+  cursor: pointer;
 }
 .slider-container .active {
   color: #F5F5F5;
@@ -848,6 +854,10 @@ p {
   text-align: center;
   color: #0D121F;
 }
+#increase-productivity .section-header .section-title, #increase-productivity .section-header .section-headline {
+  text-align: left;
+}
+
 .spendin-list-container {
   display: flex;
   flex-direction: column;
@@ -855,6 +865,23 @@ p {
   justify-content: center;
   align-items: first baseline;
   width: 100%;
+}
+@media (min-width: 992px) {
+  .spendin-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 100px;
+  }
+  .spendin-list-container .list-title {
+    align-self: end;
+  }
+  .spendin-list-container .spendin-list {
+    align-self: center;
+  }
+  .spendin-list-container .stats {
+    grid-row: 1/span 2;
+    grid-column: 2;
+  }
 }
 
 .list-title {
