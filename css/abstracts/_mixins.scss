@@ -9,6 +9,13 @@
     align-items: $align;
 }
 
+@mixin nav-top() {
+    height: max($nav-height, 3em);//3em in case root font size is too large
+    padding: 0 0 0 25px;
+    border-bottom: solid 1px #FFFFFF29;
+    font-size: 1.125rem;
+}
+
 @mixin rounded($pad: 1em) {
     border-radius: 9999px;
     padding: $pad;
@@ -19,7 +26,7 @@
     border-radius: 9999px;
     color: $color;
     background-color: $bg-color;
-    padding: 1em;
+    padding: 0.5em 1em;
     text-align: center;
 }
 
