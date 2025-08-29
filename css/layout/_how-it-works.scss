@@ -8,10 +8,4 @@
 .step-text {
     @include text-style(0.875rem, 500, $white357, center);
     padding: 0 12vw;
-} 
-#how-it-works {
-    .primary-button {
-        margin-top: 3em; // Must be greater than steps-container margin to
-        margin-bottom: 1em;
-    }
 }

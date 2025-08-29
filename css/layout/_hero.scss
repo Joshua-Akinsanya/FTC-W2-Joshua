@@ -10,8 +10,7 @@
         line-height: 1.5;
         padding-bottom: 0.6em;
     }
-
-    .primary-button { margin: 24px 0; } // This margin is specific to the hero section
+    .button-group { margin: 25px 0px;}
     
     .dashboard-img {
         margin-top: 50px;
@@ -31,21 +30,7 @@
             font-size: 1.5rem;
             text-align: center;
         }
-        .hero-cta {
-            @include flex(row, 1.5rem)
-        }
-        .primary-button, .section-link {
-            font-size: 1rem;
-            @include flex();
-            height: 3em;
-        }
-        .section-link {
-            @include primary-btn($bg-color: $black222);
-            transition: background-color 0.3s ease;
-            &:hover {
-                background-color: color.adjust($color: $black222, $lightness: 15%);
-            }
-        }
-        .dashboard-img { border-radius: 12px}
+        
+        .dashboard-img { border-radius: 12px }
     }
 }
