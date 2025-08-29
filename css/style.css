@@ -239,9 +239,14 @@ p {
 }
 
 .promo-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
 }
 .promo-container .promo-options {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -280,12 +285,61 @@ p {
   background-color: #F5F5F5;
   border-radius: 9999px;
 }
+.promo-container .floating-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
 .promo-container .promo-text {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-1.78em);
   display: inline-block;
+  margin: auto;
   border-radius: 9999px;
-  padding: 1em;
+  padding: 0.41em;
+  width: 5.56em;
+  height: 1.82em;
   background-color: #E7DEFE;
   color: #0D121F;
+}
+
+.spendin-list li {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #0D121F;
+}
+
+.list li {
+  padding-bottom: 1.25em;
+}
+
+.greentick-li {
+  background-image: url("../../assets/icons/tick-circle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  background-size: 1rem;
+  padding-left: 30px;
+}
+
+.redcross-li {
+  background-image: url("../../assets/icons/cross-circle-red.svg");
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  background-size: 1rem;
+  padding-left: 30px;
+}
+
+.greycross-li {
+  background-image: url("../../assets/icons/cross-circle-grey.svg");
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  background-size: 1rem;
+  padding-left: 30px;
+  color: #596780;
 }
 
 .nav {
@@ -628,42 +682,6 @@ p {
   line-height: 1.5;
   text-align: left;
   color: #0D121F;
-}
-
-.spendin-list li {
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: left;
-  color: #0D121F;
-}
-
-.greentick-li {
-  background-image: url("../../assets/icons/tick-circle.svg");
-  background-repeat: no-repeat;
-  background-position: 0 5px;
-  background-size: 1rem;
-  padding-left: 30px;
-}
-
-.redcross-li {
-  background-image: url("../../assets/icons/cross-circle-red.svg");
-  background-repeat: no-repeat;
-  background-position: 0 5px;
-  background-size: 1rem;
-  padding-left: 30px;
-}
-
-.graycross-li {
-  background-image: url("../../assets/icons/cross-circle-grey.svg");
-  background-repeat: no-repeat;
-  background-position: 0 5px;
-  background-size: 1rem;
-  padding-left: 30px;
-}
-
-.list li {
-  padding-bottom: 1.25em;
 }
 
 .stats {

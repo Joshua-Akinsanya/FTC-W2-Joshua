@@ -9,9 +9,9 @@
     align-items: $align;
 }
 
-@mixin rounded() {
+@mixin rounded($pad: 1em) {
     border-radius: 9999px;
-    padding: 1em;
+    padding: $pad;
 }
 
 @mixin primary-btn($color: $white, $bg-color: $primary-color-mid) {

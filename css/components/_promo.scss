@@ -1,9 +1,10 @@
 @use "../abstracts/index" as *;
 
 .promo-container {
-    position: relative;
+    @include flex(column);
 
     .promo-options {
+        position: relative;
         @include flex($gap: 16px);
     }
     .promo-option {
@@ -36,9 +37,22 @@
         border-radius: 9999px;
     }
 
+    .floating-img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+
     .promo-text {
+        position: absolute;
+        bottom: -100%;
+        left: 50%;
+        transform: translateX(-1.78em);
         display: inline-block;
-        @include rounded();
+        margin: auto;
+        @include rounded(0.41em);
+        width: 5.56em;
+        height: 1.82em;
         background-color: $primary-color-vlight;
         color: $primary-color-dark;
     }

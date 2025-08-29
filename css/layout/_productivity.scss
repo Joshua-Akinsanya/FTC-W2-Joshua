@@ -10,22 +10,6 @@
 .list-title {
     @include text-style($wt: 700, $color: $primary-color-dark);
 }
-.spendin-list li {
-    @include text-style(0.75rem, 500, $primary-color-dark);
-}
-.greentick-li { //Green circles with tick
-    @include custom-li('../../assets/icons/tick-circle.svg');
-}
-.redcross-li {
-    @include custom-li('../../assets/icons/cross-circle-red.svg');
-}
-.graycross-li {
-    @include custom-li('../../assets/icons/cross-circle-grey.svg');
-}
-
-.list li {
-    padding-bottom: 1.25em;
-}
 
 .stats {
     align-self: center;
