@@ -791,7 +791,38 @@ p {
   }
 }
 
-.steps-container {
+.how-layout-1 {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .how-layout-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .how-layout-2 .allsteps-img {
+    grid-row: 1/span 2;
+    grid-column: 1/span 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .allsteps-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .allsteps-container .step-container, .allsteps-container .step-text {
+    padding: 0;
+  }
+  .allsteps-container .step-text {
+    margin: auto;
+  }
+}
+
+.step-container {
   display: flex;
   flex-direction: column;
   gap: 14px;
