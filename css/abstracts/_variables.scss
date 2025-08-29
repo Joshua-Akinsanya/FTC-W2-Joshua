@@ -20,6 +20,7 @@ $root-font-size: 16px;
 $nav-height: 88px;
 
 // Mobile breakpoint not included as we're using Mobile-first approach
+// Ensure values in JS are the same
 $breakpoints: (
     tablet: 768px,
     desktop: 992px
