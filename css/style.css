@@ -193,7 +193,7 @@ p {
   align-items: center;
   border-radius: 9999px;
   color: #F5F5F5;
-  background-color: #1A202C;
+  background-color: rgba(0, 0, 0, 0);
   padding: 0.5em 1em;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -201,7 +201,23 @@ p {
 .secondary-button:hover {
   background-color: rgb(54.4142857143, 66.9714285714, 92.0857142857);
 }
+@media (min-width: 992px) {
+  .secondary-button {
+    background-color: #1A202C;
+  }
+}
 
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.button-group .primary-button, .button-group .secondary-button {
+  width: 100%;
+  height: 3.25em;
+}
 @media (min-width: 992px) {
   .button-group {
     display: flex;
@@ -210,14 +226,14 @@ p {
     justify-content: center;
     align-items: center;
   }
-  .button-group .primary-button, .button-group .section-link {
+  .button-group .primary-button, .button-group .secondary-button {
     font-size: 1rem;
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-    justify-content: center;
-    align-items: center;
-    height: 3.25em;
+  }
+  .button-group .primary-button {
+    width: 11.6875em;
+  }
+  .button-group .secondary-button {
+    width: 8.8125em;
   }
 }
 
@@ -377,7 +393,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
   top: 0;
@@ -386,7 +402,7 @@ p {
   height: 100vh;
   width: 100vw;
   background-color: #0D121F;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   transform: translateX(100%);
   transition: transform 0.3s ease;
 }
@@ -398,9 +414,10 @@ p {
   justify-content: space-between;
   align-items: center;
   height: max(88px, 3em);
-  padding: 0 0 0 25px;
+  padding: 0;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1607843137);
   font-size: 1.125rem;
+  padding-left: 25px;
   margin-bottom: 30px;
 }
 .sidemenu .nav-menu {
@@ -420,14 +437,10 @@ p {
 .sidemenu .nav-menu .navmenu-option:hover {
   background-color: rgb(50.6704545455, 70.1590909091, 120.8295454545);
 }
-.sidemenu .nav-cta {
-  width: 100%;
+.sidemenu .button-group {
   margin-top: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 35px;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding: 0 25px;
 }
 
 .nav {
@@ -437,9 +450,10 @@ p {
   justify-content: space-between;
   align-items: center;
   height: max(88px, 3em);
-  padding: 0 0 0 25px;
+  padding: 0;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1607843137);
   font-size: 1.125rem;
+  padding-left: 25px;
 }
 @media (min-width: 992px) {
   .nav {

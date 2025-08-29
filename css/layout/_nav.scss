@@ -5,6 +5,7 @@
 .nav {
     @include flex($justify: space-between);
     @include nav-top();
+    padding-left: 25px;
 
     // Desktop design
     @include respond(desktop) {

@@ -10,22 +10,31 @@
     }
 }
 .secondary-button {
-    @include primary-btn($bg-color: $black222);
+    @include primary-btn($bg-color: #0000);
     transition: background-color 0.3s ease;
     &:hover {
         background-color: color.adjust($color: $black222, $lightness: 15%);
     }
+    @include respond(desktop) {
+        background-color: $black222;
+    }
 }
 
 .button-group {
+    @include flex(column, 24px);
+
+    .primary-button, .secondary-button {
+        width: 100%;
+        height: 3.25em;
+    }
+
     @include respond(desktop) {
         @include flex(row, 1.5rem);
 
-        .primary-button, .section-link {
-            font-size: 1rem;
-            @include flex();
-            height: 3.25em;
-        }
+        .primary-button, .secondary-button { font-size: 1rem }
+        .primary-button { width: 11.6875em } // 187px / 16px 
+        .secondary-button { width: 8.8125em} // 141px / 16px
+        // em to make it scale with font size of element instead of root
     }
 }
 

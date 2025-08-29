@@ -2,7 +2,9 @@
 @use "sass:color";
 
 .sidemenu {
-    @include flex(column);
+    $padding-side: 25px;
+
+    @include flex(column, $justify: flex-start);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +12,7 @@
     height: 100vh;
     width: 100vw;
     background-color: $primary-color-dark;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
 
@@ -18,6 +20,7 @@
         width: 100%;
         @include flex($justify: space-between);
         @include nav-top();
+        padding-left: $padding-side;
         margin-bottom: 30px;
     }
     .nav-menu {
@@ -34,9 +37,10 @@
             }
         }
     }
-    .nav-cta {
-        width: 100%;
+
+    .button-group {
         margin-top: auto;
-        @include flex($gap: 35px);
+        width: 100%;
+        padding: 0 $padding-side;
     }
 }
