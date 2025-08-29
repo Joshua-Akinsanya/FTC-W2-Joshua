@@ -9,7 +9,7 @@
     // Desktop design
     @include respond(desktop) {
         height: max(100px,3em);
-        padding: 0 30px;
+        padding: 0 $desktop-padding;
 
         .nav-menubtn { display: none }
 

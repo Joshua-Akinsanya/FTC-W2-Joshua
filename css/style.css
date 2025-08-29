@@ -51,6 +51,11 @@ a {
 .section, .footer {
   padding: 50px 30px;
 }
+@media (min-width: 992px) {
+  .section, .footer {
+    padding: 100px 8.33%;
+  }
+}
 
 .section {
   background-image: url("../../assets/backgrounds/circular-blur-top-left.png"), url("../../assets/backgrounds/circular-blur-bottom-right.png");
@@ -61,6 +66,15 @@ a {
 @media (min-width: 992px) {
   .section {
     background-size: min(50vw, 444px);
+  }
+  .section .section-title, .section .section-headline, .section .section-subtext {
+    text-align: center;
+  }
+  .section .section-title, .section .section-subtext {
+    font-size: 1.25rem;
+  }
+  .section .section-headline {
+    font-size: 2.5rem;
   }
 }
 
@@ -117,24 +131,6 @@ a {
 }
 .section-whitebg p {
   color: #596780;
-}
-
-@media (min-width: 992px) {
-  .section .section-title, .section .section-headline, .section .section-subtext {
-    text-align: center;
-  }
-  .section .section-title, .section .section-subtext {
-    font-size: 1.25rem;
-  }
-  .section .section-headline {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .sm-screen-only {
-    display: none;
-  }
 }
 
 :root {
@@ -448,7 +444,7 @@ p {
 @media (min-width: 992px) {
   .nav {
     height: max(100px, 3em);
-    padding: 0 30px;
+    padding: 0 8.33%;
   }
   .nav .nav-menubtn {
     display: none;
@@ -647,9 +643,6 @@ p {
   border-radius: 4px;
 }
 @media (min-width: 992px) {
-  .hero-section {
-    padding: 100px 120px;
-  }
   .hero-section .section-heading {
     margin: auto;
     width: 750px;

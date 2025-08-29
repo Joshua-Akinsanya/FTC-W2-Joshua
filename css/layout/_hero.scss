@@ -20,7 +20,6 @@
     }
 
     @include respond(desktop) {
-        padding: 100px 120px;
         .section-heading {
             margin: auto;
             width: 750px;

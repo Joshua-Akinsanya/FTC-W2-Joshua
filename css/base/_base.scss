@@ -20,6 +20,9 @@ a { @include text-style($color: $grey-light) }
 
 .section, .footer {
     padding: 50px 30px;
+    @include respond(desktop) {
+        padding: 100px $desktop-padding;
+    }
 }
 .section {
     background-image: url('../../assets/backgrounds/circular-blur-top-left.png'),
@@ -30,6 +33,12 @@ a { @include text-style($color: $grey-light) }
     
     @include respond(desktop) {
         background-size: min(50vw, 444px);
+
+        .section-title, .section-headline, .section-subtext {
+            text-align: center;
+        }
+        .section-title, .section-subtext { font-size: 1.25rem }
+        .section-headline { font-size: 2.5rem }
     }
 }
 #hero-section {
@@ -68,20 +77,4 @@ a { @include text-style($color: $grey-light) }
         color: $primary-color-dark;
     }
     p { color: $grey-dark }
-}
-
-.section {
-    @include respond(desktop) {
-        .section-title, .section-headline, .section-subtext {
-            text-align: center;
-        }
-        .section-title, .section-subtext { font-size: 1.25rem }
-        .section-headline { font-size: 2.5rem }
-    }
-}
-
-.sm-screen-only {
-    @include respond(tablet) {
-        display: none;
-    }
 }
