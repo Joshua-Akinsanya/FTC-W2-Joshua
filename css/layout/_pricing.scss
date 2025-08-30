@@ -9,7 +9,7 @@
         .pricing-heading { font-size: 2.5rem }
         .section-subtext { font-size: 1.25rem }
         .plan-container {
-            @include flex($gap: 2%);
+            @include grid($templ-col: repeat(3, 1fr), $gap: 2%);
         }
     }
 }

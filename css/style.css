@@ -268,6 +268,12 @@ p {
   margin-top: 30px;
   border-radius: 10px;
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: first baseline;
+  height: 100%;
 }
 .userplan-card .plan-logotitle-group {
   display: flex;
@@ -370,6 +376,11 @@ p {
   position: absolute;
   right: 0;
   bottom: -175%;
+}
+@media (min-width: 992px) {
+  .promo-container .floating-img {
+    transform: translateX(1rem);
+  }
 }
 .promo-container .promo-text {
   position: absolute;
@@ -998,10 +1009,11 @@ p {
     font-size: 1.25rem;
   }
   #pricing .plan-container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     gap: 2%;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
   }
 }

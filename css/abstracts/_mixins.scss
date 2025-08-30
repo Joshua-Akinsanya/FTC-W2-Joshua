@@ -8,6 +8,14 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin grid($templ-col: 1fr, $templ-row: 1fr, $gap: 0, $just: center, $algn: center) {
+    display: grid;
+    grid-template-columns: $templ-col;
+    grid-template-rows: $templ-row;
+    gap: $gap;
+    justify-items: $just;
+    align-items: $algn;
+}
 
 @mixin nav-top() {
     height: max($nav-height, 3em);//3em in case root font size is too large
