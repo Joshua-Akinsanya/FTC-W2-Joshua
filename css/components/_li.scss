@@ -6,6 +6,7 @@
 
 .list li {
     padding-bottom: 1.25em;
+    @include respond(desktop) { font-size: 1.125rem }
 }
 
 .greentick-li { //Green circles with tick

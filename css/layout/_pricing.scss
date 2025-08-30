@@ -4,7 +4,12 @@
     .pricing-heading {
         @include text-style(1.5rem, 700, $primary-color-dark, center);
     }
-    .plan-container {
-        @include respond(desktop);
+    
+    @include respond(desktop){
+        .pricing-heading { font-size: 2.5rem }
+        .section-subtext { font-size: 1.25rem }
+        .plan-container {
+            @include flex($gap: 2%);
+        }
     }
 }

@@ -267,17 +267,39 @@ p {
   background-color: #EDEDED;
   margin-top: 30px;
   border-radius: 10px;
-  padding: 30px;
+  padding: 32px;
 }
 .userplan-card .plan-logotitle-group {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.75rem;
   justify-content: flex-start;
   align-items: center;
 }
 .userplan-card .plan-title, .userplan-card .plan-icon {
   display: inline-block;
+}
+.userplan-card .primary-button {
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .userplan-card {
+    margin: 0;
+    height: 100%;
+  }
+  .userplan-card .plan-title {
+    font-size: 2rem;
+  }
+  .userplan-card .plan-icon {
+    height: 32px;
+    width: 32px;
+  }
+  .userplan-card .price-bold {
+    font-size: 2.5rem;
+  }
+  .userplan-card .price {
+    font-size: 1.125rem;
+  }
 }
 
 .price {
@@ -297,6 +319,7 @@ p {
 }
 
 .promo-container {
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -346,21 +369,22 @@ p {
 .promo-container .floating-img {
   position: absolute;
   right: 0;
-  top: 50%;
+  bottom: -175%;
 }
 .promo-container .promo-text {
   position: absolute;
-  bottom: -100%;
+  bottom: -150%;
   left: 50%;
-  transform: translateX(-1.78em);
+  transform: translateX(-2em);
   display: inline-block;
   margin: auto;
   border-radius: 9999px;
   padding: 0.41em;
-  width: 5.56em;
-  height: 1.82em;
+  width: 6.36em;
+  height: 2.07em;
   background-color: #E7DEFE;
   color: #0D121F;
+  text-align: center;
 }
 
 .spendin-list li {
@@ -373,6 +397,11 @@ p {
 
 .list li {
   padding-bottom: 1.25em;
+}
+@media (min-width: 992px) {
+  .list li {
+    font-size: 1.125rem;
+  }
 }
 
 .greentick-li {
@@ -906,6 +935,22 @@ p {
   text-align: center;
   color: #0D121F;
 }
+@media (min-width: 992px) {
+  #pricing .pricing-heading {
+    font-size: 2.5rem;
+  }
+  #pricing .section-subtext {
+    font-size: 1.25rem;
+  }
+  #pricing .plan-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 #increase-productivity .section-header .section-title, #increase-productivity .section-header .section-headline {
   text-align: left;
 }

@@ -1,6 +1,7 @@
 @use "../abstracts/index" as *;
 
 .promo-container {
+    margin-bottom: 100px;
     @include flex(column);
 
     .promo-options {
@@ -40,20 +41,21 @@
     .floating-img {
         position: absolute;
         right: 0;
-        top: 50%;
+        bottom: -175%;
     }
 
     .promo-text {
         position: absolute;
-        bottom: -100%;
+        bottom: -150%;
         left: 50%;
-        transform: translateX(-1.78em);
+        transform: translateX(-2em);
         display: inline-block;
         margin: auto;
         @include rounded(0.41em);
-        width: 5.56em;
-        height: 1.82em;
+        width: 6.36em;
+        height: 2.07em;
         background-color: $primary-color-vlight;
         color: $primary-color-dark;
+        text-align: center;
     }
 }
